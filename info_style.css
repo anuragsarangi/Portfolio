@@ -1,0 +1,161 @@
+
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 50px;
+    padding-top: 10pt;
+    background-color: white; 
+} 
+
+.Professional Summary{
+    position: relative;
+    flex-basis: 33%;
+}
+.aboutme-Img{
+    flex-basis: 34%;
+}
+.exp-info-title{
+    text-align: right;
+}
+.experience{
+    flex-basis: 33%;
+    text-align: right;
+    align-self: right;
+}
+
+.info div{
+    margin: top;
+    width: 250px;
+}
+.aboutme{
+    display: block;
+    text-align: left;
+    position: relative; left: 170px;
+    text-align: center;
+
+}
+
+h2{
+   text-decoration: underline;
+   
+}
+.exptab{
+    position: relative; left: 170px;
+    text-align: right;
+    width: 300px;
+}
+
+.aboutme-Img img{
+    display: flex;
+    position: relative;
+    vertical-align: middle;
+    border: 3px double #2c2d2e;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 200px;
+    
+}
+.aboutme-Img img:hover{
+    
+
+}
+
+.info-para{
+    margin-bottom: 20pt;
+    padding-left: 10pt;
+}
+
+.aboutme a{
+    color: black;
+    padding: 5pt;
+    border-radius: .2rem;
+    text-decoration: none;
+    font-size: .9rem;
+    border-style: solid;
+    margin: auto;
+}
+.aboutme a:hover{
+    color: white;
+    background-color: #202020;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.organization{
+    
+}
+
+.role{
+    color: #6B6B6B;
+    font-size: 10pt;
+    margin-top: -1em;
+}
+@media screen and (max-width: 500px) {
+    *, *::before, *::after{
+        box-sizing: border-box;
+    }
+    .info{
+
+        padding: 0px;
+        
+    }
+    .aboutme-Image{
+        position: relative;
+        position: relative; left: 90px;
+        height: auto;
+        width: auto;
+        
+    }
+    .aboutme-Img{
+        position: relative;
+        position: relative; left: -150px;
+    }
+    .aboutme{
+        display: block;
+        text-align: center;
+        position: relative; left: -350px;
+        text-align: center;
+    }
+    h2{
+        text-decoration: underline;
+        text-align: center;
+    }
+    .info-para{
+        position: relative;
+        text-justify: auto;
+        position: relative; left: 100px;
+
+    }
+    .info-title{
+        position: relative;
+        text-justify: auto;
+        position: relative; left: 100px;
+        margin-top: 50px;
+    }
+    .exp-info-title{
+        position: relative;
+        text-justify: auto;
+        position: relative; right: 270px;
+        margin-top: 50px;
+    }
+    .experience{
+        display: block;
+        position: relative;
+        position: relative; left: -550px;
+        flex-wrap: wrap;
+
+        
+    }
+    .cv-btn{
+        position: relative;
+        position: relative; left: 100px;
+    }
+    .exptab{
+        text-align: left;
+        width: 250px;
+        position: relative; left: -280px;
+    }
+
+
+}  

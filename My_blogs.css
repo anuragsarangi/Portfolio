@@ -1,0 +1,21 @@
+.blog-content{
+    margin: 30px 30px;
+    display: inline-block;
+}
+
+.blog-links{
+    font-size: 22pt;
+    color: rgb(24, 24, 24);
+    text-decoration: none;
+    
+}
+.blog-links:hover{
+    text-decoration: underline;
+}
+.blog-Img{
+    height: 300;
+    width: 400;
+    max-width: 100%;
+}
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anurag Sarangi</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="info_style.css">
+    <link rel="stylesheet" href="skill_style.css">
+    <link rel="stylesheet" href="contact_style.css">
+</head>
+<body class="container">
+    <header class="header">
+        <ul class="name">
+            <li>Anurag Sarangi</li>
+        </ul>
+        <nav class="main-nav"><ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul></nav>
+    </header>
+    <section class="contact">
+        <div class="left-cont">
+            <h2 class="cont-h2">Thank you for your time!</h2>
+            <p class="cont-para">Please leave a message</p>
+            <img class="worldImg" src="Image/world.png" alt="world">
+        </div>
+        <div class="right-cont">
+            <form  id="gform" calss="gform" method="POST" class="pure-form pure-form-stacked" data-email="from_email@example.com"
+            action="https://script.google.com/macros/s/AKfycbwQ-J-_pxyA9VKQPGATRvzmu1gtMddi629Ne_pq/exec"> <div class="input-row">
+              <div class="input-group">
+                  <label for="name">Name *</label>
+                  <input id="name" name="name" type="text"/>
+              </div>
+              <div class="input-group">
+                  <label for="email">E-mail *</label>
+                  <input id="email" name="email" type="email" value=""/>
+              </div>
+          </div>
+          <div class="input-row">
+              <div class="input-group">
+                  <label for="contact">Contact *</label>
+                  <input id="contact" name="contact" type="text">
+              </div>
+              <div class="input-group">
+                  <label for="subject">Subject *
+                  </label>
+                  <input id="subject" name="subject" type="text">
+              </div>
+          </div>
+          <label for="email">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your message"></textarea>
+          <p class="required-field">* represents required field</p>
+          <button id="submit" type="submit" class="submit">Send</button>
+      </form>
+         
+      </div>
+    </section>
+    <!-- Customise the Thankyou Message People See when they submit the form: -->
+    <div style="display:none;" id="thankyou_message">
+        <h2>
+            Thank you!
+        </h2>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script data-cfasync="false" type="text/javascript"
+            src="./form-submission-handler-New.js"></script>
+
+    </body>
