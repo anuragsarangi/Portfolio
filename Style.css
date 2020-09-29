@@ -133,12 +133,21 @@ div .image-create{
     margin-inline-end: auto;
 }
 .container-body{
+    position: relative;
+    min-height: 100vh;
     max-width: 1200px;
     margin: 0 auto;
    
    
 }
+.footer-sec{
+    padding-bottom: 2.5rem;
+}
 .footer{
+    position: absolute;
+    margin-top: 50pt;
+    bottom: 0;
+    width: 100%;
     background: #202020;
     color: wheat;
     display: flex;
