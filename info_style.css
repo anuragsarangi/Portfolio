@@ -15,7 +15,8 @@
     flex-basis: 25%;
 }
 .info-para{
-   text-align: left; 
+   text-align: left;
+   align-self: left; 
 }
 .aboutme-Img{
     flex-basis: 34%;
