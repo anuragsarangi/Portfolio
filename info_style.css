@@ -11,6 +11,7 @@
 .Professional-Summary{
     position: relative;
     text-align: left;
+    align-self: left;
     flex-basis: 25%;
 }
 .info-para{
