@@ -10,6 +10,7 @@
 
 .Professional-Summary{
     position: relative;
+    text-align: left;
     flex-basis: 25%;
 }
 .aboutme-Img{
