@@ -52,6 +52,11 @@ h2{
     text-align: right;
     width: 300px;
 }
+.exptab-ps{
+    position: relative; left: 200px;
+    text-align: left;
+    width: 300px;
+}
 
 .aboutme-Img img{
     display: flex;
