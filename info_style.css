@@ -14,10 +14,11 @@
     align-self: left;
     flex-basis: 25%;
 }
-.info-para{
-   text-align: left;
-   align-self: left; 
+.Professional-Summary info-para{
+    text-align: left;
+    align-self: left;
 }
+
 .aboutme-Img{
     flex-basis: 34%;
 }
