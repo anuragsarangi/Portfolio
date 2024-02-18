@@ -8,15 +8,20 @@
     background-color: white;
 } 
 
-.Professional-Summary{
+/*.Professional-Summary{
+    
+*/
+
+.Professional-Summary info-para-ps{
+    text-align: left;
+    align-self: left;
     position: relative;
     text-align: left;
     align-self: left;
     flex-basis: 25%;
-}
-.Professional-Summary info-para-ps{
-    text-align: left;
-    align-self: left;
+    padding: 0px;
+    margin: 0px;
+    position: relative; left: -10px;
 }
 
 .aboutme-Img{
@@ -110,11 +115,7 @@ h2{
         padding: 0px;
         
     }
-    .Professional-Summary{
-        padding: 0px;
-        margin: 0px;
-        position: relative; left: -10px;
-    }
+    
     .aboutme-Image{
         position: relative;
         position: relative; left: 90px;
