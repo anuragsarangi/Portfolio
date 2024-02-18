@@ -26,7 +26,7 @@ flex-basis: auto; /* default value */
 position: relative; /* Only if needed */
 
 /* Adjust the position if necessary */
-left: 20pt; /* or any value you need */
+left: -50pt; /* or any value you need */
     /*text-align: left;
     align-self: left;
     position: relative;
