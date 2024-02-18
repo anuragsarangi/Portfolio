@@ -43,7 +43,7 @@ left: -50pt; /* or any value you need */
 }
 
 .aboutme-Img{
-    flex-basis: 34%;
+    flex-basis: 32%;
     text-align: center;
     align-self: center;
 }
@@ -51,7 +51,7 @@ left: -50pt; /* or any value you need */
     text-align: right;
 }
 .experience{
-    flex-basis: 41%;
+    flex-basis: 43%;
     padding-right: 10pt;
     text-align: right;
     align-self: right;
