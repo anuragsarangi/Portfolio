@@ -13,7 +13,21 @@
 */
 
 .Professional-Summary info-para-ps{
-    text-align: left;
+    /* Reset margin and padding */
+margin: 0;
+padding: 0;
+
+/* Align text to the left */
+text-align: left;
+
+/* Remove unnecessary properties */
+align-self: auto; /* default value */
+flex-basis: auto; /* default value */
+position: relative; /* Only if needed */
+
+/* Adjust the position if necessary */
+left: 0; /* or any value you need */
+    /*text-align: left;
     align-self: left;
     position: relative;
     text-align: left;
@@ -21,7 +35,7 @@
     flex-basis: 25%;
     padding: 0px;
     margin: 0px;
-    position: relative; left: -10px;
+    position: relative; left: -10px;*/
 }
 
 .aboutme-Img{
