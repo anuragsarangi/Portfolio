@@ -1,11 +1,11 @@
 
-/*.info{
+.info{
     display: flex;
     flex-wrap: wrap;
     margin: auto;
     padding: 50px;
     padding-top: 10pt;
-    background-color: white; */
+    background-color: white;
 } 
 
 /*.Professional-Summary{
