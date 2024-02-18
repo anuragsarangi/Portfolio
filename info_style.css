@@ -3,13 +3,13 @@
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    padding: 50px;
+    padding: 30px;
     padding-left: 20px;
     padding-top: 10pt;
     background-color: white;
 } 
 .info-title{
-    padding-right: 20px;
+     text-align: center;
 }
 /*.Professional-Summary{
     
