@@ -48,8 +48,8 @@ left: -50pt; /* or any value you need */
     align-self: center;
 }
 .exp-info-title{
-    position: relative; left: 170px;
-    text-align: right;
+    text-align: center;
+    align-self: center;
 }
 .experience{
     flex-basis: 43%;
