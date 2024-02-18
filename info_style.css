@@ -113,7 +113,7 @@ h2{
     .Professional-Summary{
         padding: 0px;
         margin: 0px;
-        position: relative; left: -10px;
+        /*position: relative; left: -10px;*/
     }
     .aboutme-Image{
         position: relative;
