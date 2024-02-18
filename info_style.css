@@ -46,7 +46,7 @@ left: -50pt; /* or any value you need */
     flex-basis: 34%;
     text-align: center;
     align-self: center;
-    padding-left: 20pt;
+    padding-left: 10pt;
 }
 .exp-info-title{
     text-align: right;
