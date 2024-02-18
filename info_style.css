@@ -52,6 +52,7 @@ left: -50pt; /* or any value you need */
 }
 .experience{
     flex-basis: 41%;
+    padding-right: 10pt;
     text-align: right;
     align-self: right;
 }
