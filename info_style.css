@@ -49,7 +49,7 @@ left: -50pt; /* or any value you need */
 }
 .exp-info-title{
     position: absolute;
-    left: 20px;
+    right: 20px;
 }
 .experience{
     flex-basis: 43%;
