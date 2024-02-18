@@ -43,7 +43,7 @@ left: -50pt; /* or any value you need */
 }
 
 .aboutme-Img{
-    flex-basis: 50%;
+    flex-basis: 34%;
     text-align: center;
     align-self: center;
     padding-left: 20pt;
