@@ -63,7 +63,7 @@ left: -50pt; /* or any value you need */
 .aboutme{
     display: block;
     text-align: left;
-    position: relative; left: 200px;
+    position: relative; left: 190px;
     text-align: center;
 
 }
