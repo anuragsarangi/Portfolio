@@ -12,9 +12,9 @@
 .info-title{
      text-align: center;
 }
-/*.Professional-Summary{
-    
-*/
+.Professional-Summary{
+ flex-basis: 25%;   
+}
 
 .Professional-Summary info-para-ps{
     /* Reset margin and padding */
