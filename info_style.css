@@ -48,7 +48,7 @@ left: -50pt; /* or any value you need */
     align-self: center;
 }
 .exp-info-title{
-    margin-right: 20px;
+    margin-right: 50px;
 }
 .experience{
     flex-basis: 43%;
