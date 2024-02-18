@@ -8,11 +8,11 @@
     background-color: white;
 } 
 
-/*.Professional-Summary{
+.Professional-Summary{
     position: relative;
     text-align: left;
     align-self: left;
-    flex-basis: 25%;*/
+    flex-basis: 25%;
 }
 .Professional-Summary info-para-ps{
     text-align: left;
