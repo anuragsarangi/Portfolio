@@ -48,8 +48,6 @@ left: -50pt; /* or any value you need */
     align-self: center;
 }
 .exp-info-title{
-    text-align: center;
-    align-self: center;
     padding-right: 10pt;
 }
 .experience{
