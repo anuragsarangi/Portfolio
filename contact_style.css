@@ -62,7 +62,8 @@ label{
     margin-bottom: 0;
 }
 .submit:hover {
-    text-color: orange;
+    color: white;
+    background-color: #a5a5a5; 
 
         }   
 .required-field{
