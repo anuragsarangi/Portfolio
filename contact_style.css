@@ -47,7 +47,7 @@ label{
     margin-bottom: 10px;
     display: block;
 }
-button{
+.submit{
     color: white;
     background: #202020;
     border: solid;
@@ -61,7 +61,7 @@ button{
     margin-top: 20px;
     margin-bottom: 0;
 }
-button:hover {
+.submit:hover {
     text-color: orange;
 
         }   
