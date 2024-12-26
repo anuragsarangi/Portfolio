@@ -49,21 +49,22 @@ label{
 }
 .submit{
     color: white;
-    background: #202020;
+    background: #a5a5a5;
     border: solid;
     padding: 5pt;
     width: 100px;
-    border-radius: .2rem;
+    border-radius: 10px;
     text-decoration: none;
     font-size: .9rem;
     border-style: solid;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 0;
+    cursor: pointer;
 }
 .submit:hover {
     color: white;
-    background-color: #a5a5a5; 
+    background-color: #202020; 
 
         }   
 .required-field{
