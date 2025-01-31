@@ -99,16 +99,24 @@
 
               // Handle the result
               if (responseData.result === "success") {
+                console.log("Server confirmed success. Hiding form and showing thank you message.");
+                
                 // Hide form elements after successful submission
                 var formElements = form.querySelector(".form-elements");
                 if (formElements) {
                   formElements.style.display = "none"; // Hide the form
+                  console.log("Form elements hidden.");
+                } else {
+                  console.log("Form elements not found.");
                 }
 
                 // Show the "Thank You" message
                 var thankYouMessage = form.querySelector(".thankyou_message");
                 if (thankYouMessage) {
                   thankYouMessage.style.display = "block";
+                  console.log("Thank you message displayed.");
+                } else {
+                  console.log("Thank you message not found.");
                 }
               } else {
                 console.error("Form submission failed (server sent an error)", responseData.message);
