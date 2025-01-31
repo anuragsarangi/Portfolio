@@ -5,7 +5,7 @@
   }
 
   function validateHuman(honeypot) {
-    if (honeypot) {  // if hidden form filled up
+    if (honeypot) {  // If the hidden form is filled up (spam prevention)
       console.log("Robot Detected!");
       return true;
     } else {
@@ -13,7 +13,7 @@
     }
   }
 
-  // Get all data in form and return object
+  // Get all data in form and return an object
   function getFormData(form) {
     var elements = form.elements;
 
@@ -80,12 +80,24 @@
         if (xhr.readyState === 4) {  // Request is done
           if (xhr.status === 200) {
             console.log("Form submission successful!");
-            console.log("Response:", xhr.responseText); // log the whole response
+            console.log("Raw Response:", xhr.responseText); // Log the raw response to understand its structure
 
-            // check if the response content is what I expected
+            // Check if the response content is what I expected
             try {
-              const responseData = JSON.parse(xhr.responseText);
-              // Check responseData and perform actions based on the data
+              let responseData = JSON.parse(xhr.responseText); // Try parsing the response
+              console.log("Parsed Response:", responseData);  // Log the parsed response
+
+              // If responseData is still stringified, parse it again
+              if (typeof responseData === 'string') {
+                try {
+                  responseData = JSON.parse(responseData); // Parse again if needed
+                  console.log("Double Parsed Response:", responseData);  // Log the double-parsed response
+                } catch (e) {
+                  console.error("Error parsing the response data twice:", e);
+                }
+              }
+
+              // Handle the result
               if (responseData.result === "success") {
                 // Hide form elements after successful submission
                 var formElements = form.querySelector(".form-elements");
