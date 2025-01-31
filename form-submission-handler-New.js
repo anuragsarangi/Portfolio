@@ -102,7 +102,7 @@
                 console.log("Server confirmed success. Hiding form and showing thank you message.");
                 
                 // Select the form elements container (Ensure this matches your HTML structure)
-                var formElements = form.querySelector(".contact");
+                var formElements = form.querySelector(".form-elements");
                 if (formElements) {
                   formElements.style.display = "none"; // Hide the form elements
                   console.log("Form elements hidden.");
