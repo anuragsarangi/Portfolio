@@ -110,11 +110,13 @@
                   console.log("Form elements not found.");
                 }
 
-                // Show the "Thank You" message
+                // Force show the "Thank You" message after a slight delay
                 var thankYouMessage = form.querySelector(".thankyou_message");
                 if (thankYouMessage) {
-                  thankYouMessage.style.display = "block";
-                  console.log("Thank you message displayed.");
+                  setTimeout(function() {
+                    thankYouMessage.style.display = "block";
+                    console.log("Thank you message displayed.");
+                  }, 200);  // Delay of 200ms to allow form elements to hide before showing message
                 } else {
                   console.log("Thank you message not found.");
                 }
