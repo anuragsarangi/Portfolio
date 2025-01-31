@@ -89,9 +89,12 @@
 
     if (xhr.readyState === 4 && xhr.status === 200) {
       try {
-        // Parse the JSON response
+        // Parse the outer JSON response
         var response = JSON.parse(xhr.responseText);
         
+        // Now parse the 'data' property, since it's a string with JSON
+        var data = JSON.parse(response.data);
+
         if (response.result === "success") {
           // Hide form elements after successful submission
           var formElements = form.querySelector(".form-elements");
