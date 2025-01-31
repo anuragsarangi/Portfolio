@@ -5,7 +5,7 @@
   }
 
   function validateHuman(honeypot) {
-    if (honeypot) {  //if hidden form filled up
+    if (honeypot) {  // if hidden form filled up
       console.log("Robot Detected!");
       return true;
     } else {
@@ -13,17 +13,16 @@
     }
   }
 
-  // get all data in form and return object
+  // Get all data in form and return object
   function getFormData(form) {
     var elements = form.elements;
 
     var fields = Object.keys(elements).filter(function(k) {
           return (elements[k].name !== "honeypot");
     }).map(function(k) {
-      if(elements[k].name !== undefined) {
+      if (elements[k].name !== undefined) {
         return elements[k].name;
-      // special case for Edge's html collection
-      }else if(elements[k].length > 0){
+      } else if (elements[k].length > 0) {
         return elements[k].item(0).name;
       }
     }).filter(function(item, pos, self) {
@@ -31,13 +30,13 @@
     });
 
     var formData = {};
-    fields.forEach(function(name){
+    fields.forEach(function(name) {
       var element = elements[name];
-      
-      // singular form elements just have one value
+
+      // Singular form elements just have one value
       formData[name] = element.value;
 
-      // when our element has multiple items, get their values
+      // When element has multiple items, get their values
       if (element.length) {
         var data = [];
         for (var i = 0; i < element.length; i++) {
@@ -50,91 +49,87 @@
       }
     });
 
-    // add form-specific values into the data
+    // Add form-specific values into the data
     formData.formDataNameOrder = JSON.stringify(fields);
-    formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
-    formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+    formData.formGoogleSheetName = form.dataset.sheet || "responses"; // Default sheet name
+    formData.formGoogleSendEmail = form.dataset.email || ""; // No email by default
 
     console.log(formData);
     return formData;
   }
 
-  function handleFormSubmit(event) {  // handles form submit without any jquery
-    event.preventDefault();           // we are submitting via xhr below
+  function handleFormSubmit(event) {  // Handles form submit without jQuery
+    event.preventDefault();  // We are submitting via xhr below
     var form = event.target;
-    var data = getFormData(form);         // get the values submitted in the form
+    var formData = getFormData(form);  // Get the values submitted in the form
 
-    /* OPTION: Remove this comment to enable SPAM prevention, see README.md
-    if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
-      return false;
-    }
-    */
-
-  if (data.email && !validEmail(data.email)) {   // if email is not valid, show error
-  var invalidEmail = form.querySelector(".email-invalid");
-  if (invalidEmail) {
-    invalidEmail.style.display = "block";
-    return false;  // Stop form submission if email is invalid
-  }
-} else {
-  disableAllButtons(form);
-  var url = form.action;
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', url);
-  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-  xhr.onreadystatechange = function() {
-    console.log(xhr.status, xhr.statusText);  // Log status
-    console.log(xhr.responseText);            // Log the server's response
-
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      try {
-        // Parse the outer JSON response
-        var response = JSON.parse(xhr.responseText);
-        
-        // Now parse the 'data' property, since it's a string with JSON
-        var data = JSON.parse(response.data);
-
-        if (response.result === "success") {
-          // Hide form elements after successful submission
-          var formElements = form.querySelector(".form-elements");
-          if (formElements) {
-            formElements.style.display = "none"; // Hide the form
-          }
-
-          // Show the "Thank You" message
-          var thankYouMessage = form.querySelector(".thankyou_message");
-          if (thankYouMessage) {
-            thankYouMessage.style.display = "block";
-          }
-        } else {
-          console.error("Form submission failed, result:", response.result);
-        }
-      } catch (e) {
-        console.error("Error parsing the response:", e);
+    if (formData.email && !validEmail(formData.email)) {   // If email is not valid, show error
+      var invalidEmail = form.querySelector(".email-invalid");
+      if (invalidEmail) {
+        invalidEmail.style.display = "block";
+        return false;  // Stop form submission if email is invalid
       }
     } else {
-      // Optional: Handle the case where submission failed (xhr.status !== 200)
-      console.error("Form submission failed with status:", xhr.status, xhr.statusText);
+      disableAllButtons(form);
+      var url = form.action;
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', url);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+      xhr.onreadystatechange = function() {
+        console.log(xhr.status, xhr.statusText);  // Log status
+        console.log(xhr.responseText);            // Log the server's response
+
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          try {
+            // Parse the outer JSON response
+            var response = JSON.parse(xhr.responseText);
+
+            // Now parse the 'data' property, since it's a string with JSON
+            var responseData = JSON.parse(response.data); // Parsing the 'data' string
+
+            if (response.result === "success") {
+              // Hide form elements after successful submission
+              var formElements = form.querySelector(".form-elements");
+              if (formElements) {
+                formElements.style.display = "none"; // Hide the form
+              }
+
+              // Show the "Thank You" message
+              var thankYouMessage = form.querySelector(".thankyou_message");
+              if (thankYouMessage) {
+                thankYouMessage.style.display = "block";
+              }
+            } else {
+              console.error("Form submission failed, result:", response.result);
+            }
+          } catch (e) {
+            console.error("Error parsing the response:", e);
+          }
+        } else {
+          // Optional: Handle the case where submission failed (xhr.status !== 200)
+          console.error("Form submission failed with status:", xhr.status, xhr.statusText);
+        }
+      };
+
+      // URL encode form data for sending as post data
+      var encoded = Object.keys(formData).map(function(k) {
+        return encodeURIComponent(k) + "=" + encodeURIComponent(formData[k]);
+      }).join('&');
+
+      xhr.send(encoded);
     }
-  };
-
-  // URL encode form data for sending as post data
-  var encoded = Object.keys(data).map(function(k) {
-    return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-  }).join('&');
-
-  xhr.send(encoded);
-}
+  }
 
   function loaded() {
     console.log("Contact form submission handler loaded successfully.");
-    // bind to the submit event of our form
+    // Bind to the submit event of our form
     var forms = document.querySelectorAll("#gform");
     for (var i = 0; i < forms.length; i++) {
       forms[i].addEventListener("submit", handleFormSubmit, false);
     }
-  };
+  }
+
   document.addEventListener("DOMContentLoaded", loaded, false);
 
   function disableAllButtons(form) {
