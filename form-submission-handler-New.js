@@ -111,7 +111,7 @@
                 }
 
                 // Force show the "Thank You" message after a slight delay
-                var thankYouMessage = form.querySelector(".thankyou_message");
+                var thankYouMessage = form.querySelector(".thankyou_msg");
                 if (thankYouMessage) {
                   setTimeout(function() {
                     thankYouMessage.style.display = "block";
