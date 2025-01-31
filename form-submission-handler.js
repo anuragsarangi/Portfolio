@@ -52,6 +52,7 @@
   
     function handleFormSubmit(event) {  // handles form submit without any jquery
       event.preventDefault();           // we are submitting via xhr below
+      console.log('Form submit triggered');
       var form = event.target;
       var formData = getFormData(form);
       var data = formData.data;
