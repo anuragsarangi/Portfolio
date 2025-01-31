@@ -78,7 +78,7 @@
             }
             var thankYouMessage = form.querySelector(".thankyou_message");
             if (thankYouMessage) {
-              thankYouMessage.style.display = "block";
+              thankYouMessage.style.setProperty("display", "block", "important");
             }
           }
       };
@@ -96,7 +96,12 @@
         forms[i].addEventListener("submit", handleFormSubmit, false);
       }
     };
-    document.addEventListener("DOMContentLoaded", loaded, false);
+    document.addEventListener("DOMContentLoaded", function() {
+      var form = document.querySelector("#gform");
+      if (form) {
+        form.addEventListener("submit", handleFormSubmit, false);
+          }
+    });
   
     function disableAllButtons(form) {
       var buttons = form.querySelectorAll("button");
