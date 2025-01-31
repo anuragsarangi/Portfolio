@@ -70,7 +70,7 @@
     }
     */
 
-   if (data.email && !validEmail(data.email)) {   // if email is not valid, show error
+  if (data.email && !validEmail(data.email)) {   // if email is not valid, show error
   var invalidEmail = form.querySelector(".email-invalid");
   if (invalidEmail) {
     invalidEmail.style.display = "block";
@@ -82,31 +82,41 @@
   var xhr = new XMLHttpRequest();
   xhr.open('POST', url);
   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  
+
   xhr.onreadystatechange = function() {
-    console.log(xhr.status, xhr.statusText);
-    console.log(xhr.responseText);
+    console.log(xhr.status, xhr.statusText);  // Log status
+    console.log(xhr.responseText);            // Log the server's response
 
-    // Ensure the request has completed successfully
     if (xhr.readyState === 4 && xhr.status === 200) {
-      // Hide form elements after successful submission
-      var formElements = form.querySelector(".form-elements");
-      if (formElements) {
-        formElements.style.display = "none"; // Hide the form
-      }
+      try {
+        // Parse the JSON response
+        var response = JSON.parse(xhr.responseText);
+        
+        if (response.result === "success") {
+          // Hide form elements after successful submission
+          var formElements = form.querySelector(".form-elements");
+          if (formElements) {
+            formElements.style.display = "none"; // Hide the form
+          }
 
-      // Show the "Thank You" message
-      var thankYouMessage = form.querySelector(".thankyou_message");
-      if (thankYouMessage) {
-        thankYouMessage.style.display = "block";
+          // Show the "Thank You" message
+          var thankYouMessage = form.querySelector(".thankyou_message");
+          if (thankYouMessage) {
+            thankYouMessage.style.display = "block";
+          }
+        } else {
+          console.error("Form submission failed, result:", response.result);
+        }
+      } catch (e) {
+        console.error("Error parsing the response:", e);
       }
     } else {
-      // Optional: handle any errors or failed submission here
-      console.error("Error with form submission:", xhr.status, xhr.statusText);
+      // Optional: Handle the case where submission failed (xhr.status !== 200)
+      console.error("Form submission failed with status:", xhr.status, xhr.statusText);
     }
   };
 
-  // url encode form data for sending as post data
+  // URL encode form data for sending as post data
   var encoded = Object.keys(data).map(function(k) {
     return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
   }).join('&');
