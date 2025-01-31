@@ -52,7 +52,7 @@
 
     // add form-specific values into the data
     formData.formDataNameOrder = JSON.stringify(fields);
-    formData.formGoogleSheetName = form.dataset.sheet || "Anurag-Sarangi-Send mail Sheet"; // default sheet name
+    formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
     formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
 
     console.log(formData);
@@ -107,7 +107,7 @@
   function loaded() {
     console.log("Contact form submission handler loaded successfully.");
     // bind to the submit event of our form
-    var forms = document.querySelectorAll("form.gform");
+    var forms = document.querySelectorAll("#gform");
     for (var i = 0; i < forms.length; i++) {
       forms[i].addEventListener("submit", handleFormSubmit, false);
     }
