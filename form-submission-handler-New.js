@@ -77,38 +77,39 @@
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
       xhr.onreadystatechange = function() {
-        console.log(xhr.status, xhr.statusText);  // Log status
-        console.log(xhr.responseText);            // Log the server's response
+        if (xhr.readyState === 4) {  // Request is done
+          if (xhr.status === 200) {
+            console.log("Form submission successful!");
+            console.log("Response:", xhr.responseText); // log the whole response
 
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          try {
-            // Parse the outer JSON response
-            var response = JSON.parse(xhr.responseText);
+            // check if the response content is what I expected
+            try {
+              const responseData = JSON.parse(xhr.responseText);
+              // Check responseData and perform actions based on the data
+              if (responseData.result === "success") {
+                // Hide form elements after successful submission
+                var formElements = form.querySelector(".form-elements");
+                if (formElements) {
+                  formElements.style.display = "none"; // Hide the form
+                }
 
-            // Now parse the 'data' property, since it's a string with JSON
-            var responseData = JSON.parse(response.data); // Parsing the 'data' string
-
-            if (response.result === "success") {
-              // Hide form elements after successful submission
-              var formElements = form.querySelector(".form-elements");
-              if (formElements) {
-                formElements.style.display = "none"; // Hide the form
+                // Show the "Thank You" message
+                var thankYouMessage = form.querySelector(".thankyou_message");
+                if (thankYouMessage) {
+                  thankYouMessage.style.display = "block";
+                }
+              } else {
+                console.error("Form submission failed (server sent an error)", responseData.message);
               }
-
-              // Show the "Thank You" message
-              var thankYouMessage = form.querySelector(".thankyou_message");
-              if (thankYouMessage) {
-                thankYouMessage.style.display = "block";
-              }
-            } else {
-              console.error("Form submission failed, result:", response.result);
+            } catch (e) {
+              console.error("Form submission failed (unexpected response format):", e);
             }
-          } catch (e) {
-            console.error("Error parsing the response:", e);
+
+          } else {
+            console.error("Form submission failed with status:", xhr.status, xhr.statusText);
           }
         } else {
-          // Optional: Handle the case where submission failed (xhr.status !== 200)
-          console.error("Form submission failed with status:", xhr.status, xhr.statusText);
+          console.log("Request still in progress: readyState", xhr.readyState);
         }
       };
 
