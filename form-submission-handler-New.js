@@ -101,22 +101,22 @@
               if (responseData.result === "success") {
                 console.log("Server confirmed success. Hiding form and showing thank you message.");
                 
-                // Hide form elements after successful submission
+                // Select the form elements container (Ensure this matches your HTML structure)
                 var formElements = form.querySelector(".form-elements");
                 if (formElements) {
-                  formElements.style.display = "none"; // Hide the form
+                  formElements.style.display = "none"; // Hide the form elements
                   console.log("Form elements hidden.");
                 } else {
-                  console.log("Form elements not found.");
+                  console.log("Form elements container not found.");
                 }
 
-                // Force show the "Thank You" message after a slight delay
-                var thankYouMessage = form.querySelector(".thankyou_msg");
+                // Select the thank you message (Ensure this matches your HTML structure)
+                var thankYouMessage = form.querySelector(".thankyou_msg"); // Updated to new class name
                 if (thankYouMessage) {
                   setTimeout(function() {
-                    thankYouMessage.style.display = "block";
+                    thankYouMessage.style.display = "block"; // Show the thank you message
                     console.log("Thank you message displayed.");
-                  }, 200);  // Delay of 200ms to allow form elements to hide before showing message
+                  }, 200);  // Delay of 200ms
                 } else {
                   console.log("Thank you message not found.");
                 }
