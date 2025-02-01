@@ -1,4 +1,3 @@
-
 .info{
     display: flex;
     flex-wrap: wrap;
@@ -128,100 +127,89 @@ h2{
 }
 
 @media screen and (max-width: 500px) {
-    *, *::before, *::after {
+    *, *::before, *::after{
         box-sizing: border-box;
     }
-
-    .info {
-        display: flex;
-        flex-direction: column; /* Stack sections vertically */
-        align-items: center; /* Horizontally center the content */
-        justify-content: center; /* Vertically center the content */
+    .info{
+        display: block;
         padding: 0px;
-        margin: 0;
-        text-align: center; /* Center text inside .info */
+        
     }
 
-    /* Reorder sections: About Me comes first on mobile */
+   .Professional-Summary {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Vertically center */
+    align-items: center; /* Horizontally center */
+    }
+
+
+     /* Reorder sections: About Me comes first on mobile */
     .info > .aboutme-Img {
         order: -1; /* Moves the About Me section to the top */
     }
-
-    /* Professional-Summary */
-    .Professional-Summary {
-        width: 90%; /* Ensure it takes most of the width but not full */
-        display: flex;
-        flex-direction: column; /* Stack content vertically */
-        align-items: center; /* Horizontally center the content */
-        justify-content: center; /* Vertically center */
-        margin-bottom: 20px;
-        text-align: center; /* Ensure text inside is centered */
+    
+    .aboutme-Image{
+        position: relative;
+        position: relative; left: 90px;
+        height: auto;
+        width: auto;
+        
     }
-
-    /* About Me Section */
-    .aboutme-Img {
-        width: 100%; /* Make the div full-width */
-        text-align: center; /* Center content inside */
-        margin-bottom: 20px;
+    .aboutme-Img{
+        position: relative;
+        position: relative; left: -200px;
     }
-
-    .aboutme-Image {
+    .aboutme{
         display: block;
-        margin: 0 auto; /* Center the image */
-        width: 150px; /* Set a fixed width for the image */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 50%;
-    }
-
-    .aboutme {
-        text-align: center; /* Center text inside .aboutme */
-    }
-
-    h2 {
-        text-decoration: underline;
-        text-align: center; /* Ensure the title is centered */
-    }
-
-    .info-para {
-        width: 100%; /* Make paragraph take full width */
-        text-align: center; /* Center paragraph text */
-        margin: 0 auto;
-        padding: 0 10px; /* Add padding to give some space */
-    }
-
-    .info-title {
-        margin-top: 20px;
-        text-align: center; /* Center the title */
-    }
-
-    /* Experience section */
-    .experience {
-        width: 100%; /* Full width */
-        text-align: center; /* Center text */
-        margin-bottom: 20px;
-    }
-
-    .exp-info-title {
-        margin-top: 20px;
-        text-align: center; /* Center the title */
-    }
-
-    /* CV Button */
-    .cv-btn {
-        display: block;
-        margin: 10px auto; /* Center the button */
+        text-align: center;
         text-align: center;
     }
-
-    /* Table styling for experience */
-    .exptab {
-        margin: 0 auto; /* Center table */
-        width: 80%; /* Make table width smaller for mobile */
-        text-align: center; /* Center table content */
-        table-layout: auto;
+    h2{
+        text-decoration: underline;
+        text-align: center;
     }
+    .info-para{
+        position: relative;
+        text-justify: auto;
+        width: 180pt;
+        position: relative; left: 100px;
 
-    .exptab td {
+    }
+    .info-title{
+        position: relative;
+        text-justify: auto;
+        position: relative; left: 100px;
+        margin-top: 50px;
+    }
+    .exp-info-title{
+        position: relative; left: 120px;
+        text-align: center;
+       
+        margin-top: 40px;
+    }
+    .experience{
+        display: block;
+        position: relative;
+        flex-wrap: wrap;
+        text-align: center;
+        
+    }
+    .cv-btn{
+        position: relative;
+        position: relative; left: 100px;
+    }
+    .exptab{
+        position: relative; left: 120px;
+        table-layout: auto;
+        text-align: left;
+        position: relative;
+        text-justify: auto;
+        margin: auto;
+        width: auto;
+    }
+    .exptab td{
         padding: 5pt;
     }
-}
+
+}  
