@@ -137,6 +137,22 @@ h2{
         
     }
 
+    .Professional-Summary .info-para-ps{
+    /* Reset margin and padding */
+        margin: 0;
+        padding: 0;
+        
+        /* Align text to the left */
+        text-align: center;
+        
+        /* Remove unnecessary properties */
+        align-self: auto; /* default value */
+        flex-basis: auto; /* default value */
+        position: relative; /* Only if needed */
+        
+        }
+
+
      /* Reorder sections: About Me comes first on mobile */
     .info > .aboutme-Img {
         order: -1; /* Moves the About Me section to the top */
