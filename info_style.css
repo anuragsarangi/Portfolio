@@ -128,89 +128,98 @@ h2{
 }
 
 @media screen and (max-width: 500px) {
-    *, *::before, *::after{
+    *, *::before, *::after {
         box-sizing: border-box;
     }
-    .info{
-        display: block;
+
+    .info {
+        display: flex;
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Horizontally center the content */
         padding: 0px;
-        
     }
 
-   .Professional-Summary {
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Vertically center */
-    align-items: center; /* Horizontally center */
-    }
-
-
-     /* Reorder sections: About Me comes first on mobile */
+    /* Reorder sections: About Me comes first on mobile */
     .info > .aboutme-Img {
         order: -1; /* Moves the About Me section to the top */
     }
-    
-    .aboutme-Image{
-        position: relative;
-        position: relative; left: 90px;
+
+    /* Professional-Summary */
+    .Professional-Summary {
+        width: 100%; /* Full width */
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Horizontally center */
+        justify-content: center; /* Vertically center */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Image Styling */
+    .aboutme-Image {
+        width: auto; /* Image is not constrained */
         height: auto;
-        width: auto;
-        
+        margin: 0 auto; /* Center image */
     }
-    .aboutme-Img{
-        position: relative;
-        position: relative; left: -200px;
+
+    .aboutme-Img {
+        width: 100%; /* Make the div full-width */
+        text-align: center;
+        margin-bottom: 20px;
     }
-    .aboutme{
+
+    /* About me text */
+    .aboutme {
         display: block;
         text-align: center;
-        text-align: center;
+        margin: 0 auto; /* Center text */
     }
-    h2{
+
+    h2 {
         text-decoration: underline;
         text-align: center;
     }
-    .info-para{
-        position: relative;
-        text-justify: auto;
-        width: 180pt;
-        position: relative; left: 100px;
 
+    /* Info paragraph (Professional Summary) */
+    .info-para {
+        width: 90%; /* Adjust to fit content */
+        text-align: center; /* Center text */
+        margin: 0 auto;
     }
-    .info-title{
-        position: relative;
-        text-justify: auto;
-        position: relative; left: 100px;
+
+    .info-title {
         margin-top: 50px;
+        text-align: center; /* Center the title */
     }
-    .exp-info-title{
-        position: relative; left: 120px;
-        text-align: center;
-       
+
+    /* Experience section title */
+    .exp-info-title {
+        text-align: center; /* Center the title */
         margin-top: 40px;
     }
-    .experience{
+
+    /* Experience section */
+    .experience {
+        width: 100%; /* Full width */
         display: block;
-        position: relative;
-        flex-wrap: wrap;
         text-align: center;
-        
-    }
-    .cv-btn{
-        position: relative;
-        position: relative; left: 100px;
-    }
-    .exptab{
-        position: relative; left: 120px;
-        table-layout: auto;
-        text-align: left;
-        position: relative;
-        text-justify: auto;
-        margin: auto;
-        width: auto;
-    }
-    .exptab td{
-        padding: 5pt;
+        margin-bottom: 20px;
     }
 
-}  
+    /* CV Button */
+    .cv-btn {
+        margin: 0 auto;
+    }
+
+    /* Table styling for experience */
+    .exptab {
+        margin: 0 auto; /* Center table */
+        table-layout: auto;
+        width: auto; /* Adjust width */
+        text-align: left;
+    }
+
+    .exptab td {
+        padding: 5pt;
+    }
+}
