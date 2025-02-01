@@ -137,20 +137,12 @@ h2{
         
     }
 
-    .Professional-Summary .info-para-ps{
-    /* Reset margin and padding */
-        margin: 0;
-        padding: 0;
-        
-        /* Align text to the left */
-        text-align: center;
-        
-        /* Remove unnecessary properties */
-        align-self: auto; /* default value */
-        flex-basis: auto; /* default value */
-        position: relative; /* Only if needed */
-        
-        }
+   .Professional-Summary {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Vertically center */
+    align-items: center; /* Horizontally center */
+    }
 
 
      /* Reorder sections: About Me comes first on mobile */
@@ -201,7 +193,7 @@ h2{
         display: block;
         position: relative;
         flex-wrap: wrap;
-
+        text-align: center;
         
     }
     .cv-btn{
