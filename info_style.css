@@ -16,7 +16,7 @@
  flex-basis: 25%;   
 }
 
-.Professional-Summary info-para-ps{
+.Professional-Summary .info-para-ps{
     /* Reset margin and padding */
 margin: 0;
 padding: 0;
