@@ -132,9 +132,14 @@ h2{
         box-sizing: border-box;
     }
     .info{
-
+        display: block;
         padding: 0px;
         
+    }
+
+     /* Reorder sections: About Me comes first on mobile */
+    .info > .aboutme-Img {
+        order: -1; /* Moves the About Me section to the top */
     }
     
     .aboutme-Image{
