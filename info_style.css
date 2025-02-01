@@ -181,7 +181,7 @@ h2{
     }
 
     /* Info paragraph (Professional Summary) */
-    .info-para {
+    .info-para-ps {
         width: 90%; /* Adjust to fit content */
         text-align: center; /* Center text */
         margin: 0 auto;
