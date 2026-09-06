@@ -54,8 +54,8 @@ position: relative; /* Only if needed */
 }
 
 .aboutme-Img img {
-  width: 280px;
-  height: 280px;         /* must match width */
+  width: 180px;
+  height: 180px;         /* must match width */
   border-radius: 50%;
   object-fit: cover;     /* prevents stretching */
   object-position: center;
