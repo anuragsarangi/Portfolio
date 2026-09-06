@@ -146,20 +146,17 @@ div .image-create{
 }
 
 .footer {
-  width: 100%;
-  padding: 22px 20px;
-  background: #202020;
-  color: white;
-
   display: flex;
-  justify-content: space-between; /* left and right */
-  align-items: center
-  
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 22px 40px;
+  background: #202020;
 }
 
 .copyright {
-  margin: 0 0 14px;
-  text-align: left;
+  margin: 0;
+  color: white;
 }
 
 .soc-link {
