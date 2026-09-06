@@ -60,8 +60,8 @@ position: relative; /* Only if needed */
 }
 
 .aboutme-Img img {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   flex-shrink: 0;
   border-radius: 50%;
   object-fit: cover;
