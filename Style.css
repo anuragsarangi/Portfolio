@@ -166,6 +166,7 @@ div .image-create{
   display: flex;
   align-items: center;
   gap: 22px;
+  margin-left: auto;
 }
 
 .soc-link a {
