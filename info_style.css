@@ -41,11 +41,29 @@ position: relative; /* Only if needed */
     position: relative; left: -10px;*/
 }
 
-.aboutme-Img{
+/*.aboutme-Img{
     flex-basis: 32%;
     text-align: center;
     align-self: center;
+}*/
+
+.aboutme-Img {
+  flex-basis: 32%;
+  text-align: center;
+  align-self: center;
 }
+
+.aboutme-Img img {
+  width: 280px;
+  height: 280px;         /* must match width */
+  border-radius: 50%;
+  object-fit: cover;     /* prevents stretching */
+  object-position: center;
+  border: 3px solid #222;
+  display: block;
+  margin: 0 auto;
+}
+
 .exp-info-title{
     margin-right: 50px;
 }
