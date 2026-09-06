@@ -1,4 +1,6 @@
 @import url('https://fonts.google.com/specimen/Roboto');
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 *, *::before, *::after{
     box-sizing: border-box;
@@ -140,20 +142,41 @@ div .image-create{
    
    
 }
-.footer-sec{
-    padding-bottom: 2.5rem;
+.footer-sec {
+  margin-top: 50px;
 }
-.footer{
-    position: absolute;
-    margin-top: 50pt;
-    bottom: 0;
-    width: 100%;
-    background: #202020;
-    color: wheat;
-    display: flex;
-    justify-content: space-around;
+
+.footer {
+  width: 100%;
+  padding: 22px 20px;
+  background: #202020;
+  color: white;
+  text-align: center;
 }
-.linkedin-img{
+
+.copyright {
+  margin: 0 0 14px;
+}
+
+.soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+
+.soc-link a {
+  color: wheat; /* all icons match */
+  font-size: 25px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.soc-link a:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+}
+/*.linkedin-img{
     height: 20px;
     width: 20px;
     margin-top: 8px;
@@ -166,7 +189,7 @@ div .image-create{
     vertical-align: middle;
     margin-top: 20px;
 }
-
+*/
 @media screen and (max-width: 500px){
 
     .container-body{
