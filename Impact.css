@@ -40,13 +40,13 @@
 
 .impact-card:hover {
   transform: translateY(-6px);
-  border-color: #19c5c8;
+  border-color: #b9c8d6;
 }
 
 .impact-number {
   display: block;
   margin-bottom: 14px;
-  color: #19c5c8;
+  color: #b9c8d6;
   font-size: 42px;
   font-weight: 700;
 }
