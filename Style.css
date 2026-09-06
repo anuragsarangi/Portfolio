@@ -1,6 +1,5 @@
 @import url('https://fonts.google.com/specimen/Roboto');
-<link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 
 *, *::before, *::after{
     box-sizing: border-box;
@@ -166,7 +165,7 @@ div .image-create{
 }
 
 .soc-link a {
-  color: wheat; /* all icons match */
+  color: white; /* all icons match */
   font-size: 25px;
   transition: color 0.2s ease, transform 0.2s ease;
 }
@@ -175,7 +174,7 @@ div .image-create{
   color: #ffffff;
   transform: translateY(-3px);
 }
-}
+
 /*.linkedin-img{
     height: 20px;
     width: 20px;
