@@ -160,13 +160,12 @@ div .image-create{
 
 .soc-link {
   display: flex;
-  justify-content: center;
-  align-items: right;
   gap: 22px;
 }
 
 .soc-link a {
   color: white; /* all icons match */
+  align-items: right;
   font-size: 25px;
   transition: color 0.2s ease, transform 0.2s ease;
 }
