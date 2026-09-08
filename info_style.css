@@ -1,240 +1,182 @@
-.info{
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    padding: 30px;
-    padding-left: 20px;
-    padding-right: 10pt;
-    padding-top: 10pt;
-    background-color: white;
-} 
-.info-title{
-     text-align: center;
-}
-.Professional-Summary{
- flex-basis: 25%;   
+.info {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.95fr);
+  gap: clamp(56px, 7vw, 130px);
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px clamp(24px, 6vw, 90px);
+  background: #fff;
+  color: #202020;
 }
 
-.Professional-Summary .info-para-ps{
-    /* Reset margin and padding */
-margin: 0;
-padding: 0;
-
-/* Align text to the left */
-text-align: left;
-
-/* Remove unnecessary properties */
-align-self: auto; /* default value */
-flex-basis: auto; /* default value */
-position: relative; /* Only if needed */
-
-/* Adjust the position if necessary */
-/*left: -50pt; /* or any value you need */
-    /*text-align: left;
-    align-self: left;
-    position: relative;
-    text-align: left;
-    align-self: left;
-    flex-basis: 25%;
-    padding: 0px;
-    margin: 0px;
-    position: relative; left: -10px;*/
+.section-label {
+  margin: 0 0 12px;
+  color: #666;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
 }
 
-/*.aboutme-Img{
-    flex-basis: 32%;
-    text-align: center;
-    align-self: center;
-}*/
-.aboutme {
-  text-align: center;
+.section-label::after {
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin-top: 12px;
+  content: "";
+  background: #202020;
 }
 
+.info-intro > h2,
+.experience > h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  line-height: 1.15;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 32px;
+  align-items: center;
+  margin-top: 48px;
+}
 
 .aboutme-Img {
   display: flex;
   justify-content: center;
-  width: 100%;
-  margin: 20px 0;
-  overflow: visible;
 }
 
-.aboutme-Img img {
+.aboutme-Image {
   width: 150px;
   height: 150px;
-  flex-shrink: 0;
+  margin: 0;
+  border: 2px solid #202020;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
-  border: 2px solid #222;
-  display: block;
-  margin: 20px auto;
 }
 
-.exp-info-title{
-    margin-right: 50px;
-}
-.experience{
-    flex-basis: 43%;
-    padding-right: 10pt;
-    text-align: right;
-    align-self: right;
+.about-content h3 {
+  margin: 0 0 12px;
+  font-size: 1.65rem;
 }
 
-.info div{
-    margin: top;
-    width: 250px;
+.about-content p:not(.section-label) {
+  margin: 0 0 12px;
+  color: #494949;
+  font-size: 1rem;
+  line-height: 1.65;
 }
-.aboutme{
+
+.cv-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 14px 24px;
+  border: 2px solid #202020;
+  border-radius: 3px;
+  background: #202020;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.cv-btn:hover {
+  background: #fff;
+  color: #202020;
+}
+
+.experience {
+  padding-left: clamp(30px, 4vw, 65px);
+  border-left: 1px solid #d4d4d4;
+}
+
+.experience-timeline {
+  position: relative;
+  margin: 42px 0 0;
+  padding: 0 0 0 38px;
+  list-style: none;
+}
+
+.experience-timeline::before {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 6px;
+  width: 2px;
+  content: "";
+  background: #777;
+}
+
+.experience-timeline li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 32px;
+}
+
+.experience-timeline li::before {
+  position: absolute;
+  top: 7px;
+  left: -38px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  content: "";
+  background: #202020;
+}
+
+.experience-timeline h3 {
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+}
+
+.experience-timeline p {
+  margin: 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.experience-timeline time {
+  color: #555;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  .experience {
+    padding-top: 56px;
+    padding-left: 0;
+    border-top: 1px solid #d4d4d4;
+    border-left: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .info {
+    padding: 56px 24px;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutme-Img {
+    justify-content: flex-start;
+  }
+
+  .experience-timeline li {
     display: block;
-    text-align: center;
-    position: relative; left: 170px;
-    
+  }
 
+  .experience-timeline time {
+    display: block;
+    margin-top: 8px;
+  }
 }
-
-h2{
-   text-decoration: underline;
-   
-}
-.exptab{
-    position: relative; left: 200px;
-    text-align: right;
-    width: 300px;
-}
-
-.aboutme-Img img{
-    display: flex;
-    position: relative;
-    vertical-align: middle;
-    border: 3px double #2c2d2e;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 200px;
-    
-}
-.aboutme-Img img:hover{
-    
-
-}
-
-.info-para{
-    margin-bottom: 20pt;
-    padding-left: 10pt;
-}
-
-.aboutme a{
-    color: black;
-    padding: 5pt;
-    border-radius: .2rem;
-    text-decoration: none;
-    font-size: .9rem;
-    border-style: solid;
-    margin: auto;
-}
-.aboutme a:hover{
-    color: white;
-    background-color: #202020;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-
-.organization{
-    
-}
-
-.role{
-    color: #6B6B6B;
-    font-size: 10pt;
-    margin-top: -1em;
-}
-.exptab td{
-}
-
-@media screen and (max-width: 500px) {
-    *, *::before, *::after{
-        box-sizing: border-box;
-    }
-    .info{
-        display: block;
-        padding: 0px;
-        
-    }
-
-   .Professional-Summary {
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Vertically center */
-    align-items: center; /* Horizontally center */
-    }
-
-
-     /* Reorder sections: About Me comes first on mobile */
-    .info > .aboutme-Img {
-        order: -1; /* Moves the About Me section to the top */
-    }
-    
-    .aboutme-Image{
-        position: relative;
-        position: relative; left: 90px;
-        height: auto;
-        width: auto;
-        
-    }
-    .aboutme-Img{
-        position: relative;
-        position: relative; left: -200px;
-    }
-    .aboutme{
-        display: block;
-        text-align: center;
-        text-align: center;
-    }
-    h2{
-        text-decoration: underline;
-        text-align: center;
-    }
-    .info-para{
-        position: relative;
-        text-justify: auto;
-        width: 180pt;
-        position: relative; left: 100px;
-
-    }
-    .info-title{
-        position: relative;
-        text-justify: auto;
-        position: relative; left: 100px;
-        margin-top: 50px;
-    }
-    .exp-info-title{
-        position: relative; left: 120px;
-        text-align: center;
-       
-        margin-top: 40px;
-    }
-    .experience{
-        display: block;
-        position: relative;
-        flex-wrap: wrap;
-        text-align: center;
-        
-    }
-    .cv-btn{
-        position: relative;
-        position: relative; left: 100px;
-    }
-    .exptab{
-        position: relative; left: 120px;
-        table-layout: auto;
-        text-align: left;
-        position: relative;
-        text-justify: auto;
-        margin: auto;
-        width: auto;
-    }
-    .exptab td{
-        padding: 5pt;
-    }
-
-}  
