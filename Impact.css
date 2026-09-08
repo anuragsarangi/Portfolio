@@ -9,11 +9,20 @@
 }
 
 .impact .section-label {
-  margin: 0;
+  margin: 0 0 12px;
   color: #bdbdbd;
-  font-size: 34px;
-  text-decoration: underline;
-  text-underline-offset: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.impact .section-label::after {
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin-top: 12px;
+  content: "";
+  background: #202020;
 }
 
 .impact-intro {
