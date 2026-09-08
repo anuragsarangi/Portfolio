@@ -1,28 +1,31 @@
 .industry-experience {
-  padding: 90px clamp(24px, 6vw, 96px);
+  max-width: 1100px;
+  margin: 20px auto 70px;
+  padding: 35px 35px;
+  text-align: center;
   background: #202020;
-  color: #f7f7f7;
+  border-radius: 14px;
+  color: #ffffff;
 }
 
 .industry-heading {
   max-width: 760px;
-  padding-bottom: 48px;
-  border-bottom: 1px solid #686868;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
-.industry-heading .section-label,
-.industry-label {
-  margin: 0 0 14px;
-  color: #bdbdbd;
-  text-decoration: underline;
-  text-underline-offset: 8px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+.industry-heading .section-label {
+  display: inline-block;
+  margin-bottom: 0;
 }
 
 .industry-heading .section-label::after {
-  display: none;
+  display: block;
+  width: 97px;      /* same short line style as Profile */
+  height: 5px;
+  margin-top: 14px;
+  content: "";
+  background: #f5f5f5;
 }
 
 .industry-heading h2 {
