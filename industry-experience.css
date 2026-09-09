@@ -144,7 +144,8 @@
   letter-spacing: 0.13em;
 }
 
-@media (max-width: 760px) {
+/* Two cards side-by-side until a genuinely narrow phone screen */
+@media (max-width: 520px) {
   .industry-experience {
     width: calc(100% - 32px);
     padding: 28px 24px;
@@ -152,13 +153,11 @@
 
   .industry-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
-  .industry-card,
-  .industry-card:nth-child(odd),
-  .industry-card:nth-child(even) {
+  .industry-card {
     min-height: auto;
     padding: 28px;
-    border-right: 2px solid #4d4d4d;
   }
 }
