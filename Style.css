@@ -16,13 +16,13 @@ body {
     display: flex;
     flex-direction: column;
 }
-.name {
-  display: inline-block;
-  padding: 1rem;
-  color: #202020;
-  font-style: normal;
-  font-weight: 600;
-  text-decoration: none;
+.name a{
+    color: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    align-items: center;
+    flex-direction: row;
+    padding: 1rem;
 }
 
 .name:visited {
