@@ -70,14 +70,19 @@
 }
 
 .industry-icon {
-  width: auto;
-  height: auto;
-  margin-bottom: 25px;
-  border: 0;
-  border-radius: 0;
-  color: #f5f5f5;
-  font-size: 2.2rem;
-  line-height: 1;
+  display: flex;
+  width: 64px;
+  height: 64px;
+  margin: 0 0 28px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.industry-icon img {
+  display: block;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
 }
 
 .industry-label {
