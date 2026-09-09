@@ -47,8 +47,7 @@ body {
     left: 0;
     top: 0;
     z-index: 99;
-    padding: 15px 0;
-   
+    padding: 0;
 }
 .header ul{
     display: flex;
@@ -71,6 +70,7 @@ body {
     text-decoration: none;
     align-items: center;
     flex-direction: row;
+    padding: 1rem;
 
 }
 
