@@ -16,19 +16,22 @@ body {
     display: flex;
     flex-direction: column;
 }
-.name{
-    text-indent: 10pt;
-    color: inherit;
-    font-style: inherit;
-    text-decoration: none;
-    align-items: center;
-    flex-direction: row;
-    padding: 1rem;
+.name {
+  display: inline-block;
+  padding: 1rem;
+  color: #202020;
+  font-style: normal;
+  font-weight: 600;
+  text-decoration: none;
 }
-.name a:hover{
-    color: white;
-    background-color: #202020;
-    
+
+.name:visited {
+  color: #202020;
+}
+
+.name:hover {
+  color: #fff;
+  background-color: #202020;
 }
 
 .header{
