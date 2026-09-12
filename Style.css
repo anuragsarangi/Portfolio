@@ -481,3 +481,41 @@ div .image-create{
     padding: 22px 20px;
   }
 }
+/* Mobile footer */
+@media (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+
+        padding: 26px 20px;
+        text-align: center;
+    }
+
+    .copyright {
+        width: 100%;
+        margin: 0;
+
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .soc-link {
+        justify-content: center;
+        gap: 24px;
+
+        width: 100%;
+        margin: 0;
+    }
+
+    .soc-link a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 25px;
+        line-height: 1;
+    }
+}
