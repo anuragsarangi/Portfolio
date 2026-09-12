@@ -14,14 +14,75 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body class="container-body">
-    <header class="header">
-         <ul class="name">
-            <a class="name" href="index.html">Anurag Sarangi</a>
+  <header class="header">
+    <!-- Portfolio name -->
+    <a class="site-name" href="index.html">Anurag Sarangi</a>
+
+    <!-- Floating navigation -->
+    <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+            <li>
+                <a class="nav-link active"
+                   href="index.html"
+                   aria-label="Home"
+                   aria-current="page">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 10.5 12 3l9 7.5V21h-6v-7H9v7H3V10.5Z"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="nav-link"
+                   href="about.html"
+                   aria-label="About me">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="7" r="4"/>
+                        <path d="M4 21v-2a8 8 0 0 1 16 0v2"/>
+                    </svg>
+                    <span>About</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="nav-link"
+                   href="experience.html"
+                   aria-label="Experience">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="7" width="18" height="14" rx="2"/>
+                        <path d="M8 7V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3"/>
+                        <path d="M3 12h18"/>
+                    </svg>
+                    <span>Experience</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="nav-link"
+                   href="projects.html"
+                   aria-label="Projects">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/>
+                    </svg>
+                    <span>Projects</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="nav-link"
+                   href="contact.html"
+                   aria-label="Contact me">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="2" y="4" width="20" height="16" rx="3"/>
+                        <path d="m3 6 9 7 9-7"/>
+                    </svg>
+                    <span>Contact</span>
+                </a>
+            </li>
         </ul>
-        <nav class="main-nav"><ul>
-            <li><a href="contact.html">Contact Me</a></li>
-        </ul></nav>
-    </header>
+    </nav>
+</header>
     <section class="intro">
         <div class="intro-content">
             <p class="hello">Hello</p>
