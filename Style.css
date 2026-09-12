@@ -234,6 +234,131 @@ body {
         height: 2px;
     }
 }
+/* ========================================
+   Fixed and collapsible header
+======================================== */
+
+/* Prevent page content from hiding behind the fixed header */
+body {
+    padding-top: 106px;
+}
+
+/* Header remains visible while scrolling */
+.site-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+
+    height: 106px !important;
+    min-height: 106px !important;
+    padding: 4px 16px !important;
+
+    transition:
+        height 220ms ease,
+        min-height 220ms ease,
+        padding 220ms ease,
+        box-shadow 220ms ease;
+}
+
+/* Navigation links in normal header */
+.header-nav__link {
+    height: 96px;
+    min-height: 96px !important;
+
+    transition:
+        height 220ms ease,
+        min-height 220ms ease,
+        padding 220ms ease,
+        gap 220ms ease,
+        color 180ms ease,
+        background-color 180ms ease;
+}
+
+/* Animate navigation text */
+.header-nav__link span {
+    max-height: 20px;
+    overflow: hidden;
+
+    opacity: 1;
+    transform: translateY(0);
+
+    transition:
+        opacity 160ms ease,
+        max-height 220ms ease,
+        transform 220ms ease;
+}
+
+/* ========================================
+   Compact header during scrolling
+======================================== */
+
+.site-header.scrolled {
+    height: 58px !important;
+    min-height: 58px !important;
+    padding: 4px 16px !important;
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+.site-header.scrolled .header-nav__link {
+    height: 48px;
+    min-height: 48px !important;
+    padding: 4px;
+    gap: 0;
+}
+
+/* Hide labels and retain icons */
+.site-header.scrolled .header-nav__link span {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-5px);
+}
+
+/* Keep icons properly sized */
+.site-header.scrolled .header-nav__link svg {
+    width: 25px !important;
+    min-width: 25px;
+    height: 25px !important;
+}
+
+/* Active indicator in compact mode */
+.site-header.scrolled .header-nav__link.active::after,
+.site-header.scrolled
+    .header-nav__link[aria-current="page"]::after {
+    right: 35%;
+    bottom: 0;
+    left: 35%;
+}
+
+/* Same behaviour on desktop */
+@media (min-width: 768px) {
+    .site-header {
+        padding-right: 32px !important;
+        padding-left: 32px !important;
+    }
+
+    .site-header.scrolled {
+        height: 58px !important;
+        min-height: 58px !important;
+        padding: 4px 32px !important;
+    }
+
+    .site-header.scrolled .header-nav__link {
+        height: 48px;
+        min-height: 48px !important;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .site-header,
+    .header-nav__link,
+    .header-nav__link span {
+        transition: none;
+    }
+}
 
 /* ========================================
    Intro section
