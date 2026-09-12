@@ -36,16 +36,14 @@ body {
 .name:hover {
   color: #fff;
   background-color: #202020;
-}
-/* ========================================
+}/* ========================================
    Header
 ======================================== */
 
 .site-header {
     width: 100%;
-    min-height: 50px;
     margin: 0;
-    padding: 18px 16px;
+    padding: 6px 16px;
 
     display: flex;
     align-items: center;
@@ -72,7 +70,7 @@ body {
 
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    align-items: stretch;
+    align-items: center;
 
     list-style: none;
 }
@@ -90,18 +88,18 @@ body {
 .header-nav__link {
     position: relative;
 
-    min-height: 40px;
-    padding: 12px 4px;
+    min-height: 68px;
+    padding: 6px 4px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 9px;
+    gap: 5px;
 
     color: rgba(255, 255, 255, 0.82);
     background: transparent;
-    border-radius: 8px;
+    border-radius: 6px;
     text-decoration: none;
 
     transition:
@@ -111,8 +109,8 @@ body {
 }
 
 .header-nav__link svg {
-    width: 29px;
-    height: 29px;
+    width: 25px;
+    height: 25px;
 
     fill: none;
     stroke: currentColor;
@@ -124,9 +122,9 @@ body {
 }
 
 .header-nav__link span {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.1;
     white-space: nowrap;
 }
 
@@ -137,7 +135,7 @@ body {
 .header-nav__link:hover {
     color: #ffffff;
     background: rgba(255, 255, 255, 0.06);
-    transform: translateY(-2px);
+    transform: translateY(-1px);
 }
 
 .header-nav__link:hover svg {
@@ -152,9 +150,9 @@ body {
 .header-nav__link.active::after,
 .header-nav__link[aria-current="page"]::after {
     position: absolute;
-    right: 25%;
-    bottom: 3px;
-    left: 25%;
+    right: 26%;
+    bottom: 1px;
+    left: 26%;
 
     height: 2px;
 
@@ -167,7 +165,35 @@ body {
 .header-nav__link:focus-visible {
     color: #ffffff;
     outline: 2px solid #ffffff;
-    outline-offset: 2px;
+    outline-offset: 1px;
+}
+
+/* ========================================
+   Desktop
+======================================== */
+
+@media (min-width: 768px) {
+    .site-header {
+        padding: 7px 32px;
+    }
+
+    .header-nav {
+        width: 460px;
+    }
+
+    .header-nav__link {
+        min-height: 70px;
+        padding: 6px;
+    }
+
+    .header-nav__link svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .header-nav__link span {
+        font-size: 0.9rem;
+    }
 }
 
 /* ========================================
