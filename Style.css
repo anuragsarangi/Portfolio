@@ -43,7 +43,7 @@ body {
 
 .site-header {
     width: 100%;
-    min-height: 130px;
+    min-height: 90px;
     margin: 0;
     padding: 18px 16px;
 
@@ -90,7 +90,7 @@ body {
 .header-nav__link {
     position: relative;
 
-    min-height: 92px;
+    min-height: 80px;
     padding: 12px 4px;
 
     display: flex;
