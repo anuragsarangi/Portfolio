@@ -174,25 +174,37 @@ body {
 
 @media (min-width: 768px) {
     .site-header {
-        padding: 7px 32px;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 4px 32px !important;
     }
 
     .header-nav {
-        width: 460px;
+        width: 420px;
     }
 
     .header-nav__link {
-        min-height: 70px;
-        padding: 6px;
+        height: 56px;
+        min-height: 0 !important;
+        padding: 4px 6px;
+        gap: 3px;
     }
 
     .header-nav__link svg {
-        width: 26px;
-        height: 26px;
+        width: 22px;
+        height: 22px;
     }
 
     .header-nav__link span {
-        font-size: 0.9rem;
+        font-size: 0.82rem;
+        line-height: 1;
+    }
+
+    .header-nav__link.active::after,
+    .header-nav__link[aria-current="page"]::after {
+        right: 28%;
+        bottom: 0;
+        left: 28%;
     }
 }
 
