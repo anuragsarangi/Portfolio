@@ -1,111 +1,218 @@
+/* ========================================
+   Contact section
+======================================== */
 
-.contact{
-    display: flex;
-    flex-wrap: wrap;
+.contact {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 40%) minmax(0, 60%);
 }
-.left-cont{
-    color: white;
-    flex-basis: 40%;
+
+.left-cont,
+.right-cont {
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Left contact panel */
+.left-cont {
+    padding: 48px clamp(30px, 5vw, 70px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #ffffff;
     background: #202020;
-    padding: 40px 60px;
-}
-.right-cont{
-    flex-basis: 60%;
-    padding: 40px;
-
-}
-.gform{
-    flex-basis: 60%;
-   
 }
 
-.input-row{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
+.cont-h2 {
+    margin: 0 0 12px;
+    color: #ffffff;
+    text-decoration: none;
 }
 
-.input-row .input-group{
-    flex-basis: 45%;
+.cont-para {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.82);
 }
 
-input{
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    outline: none;
-    padding-top: 10px;
-    padding-bottom: 5px;
-}
-textarea{
-    width: 100%;
-    border: 1px solid #ccc;
-    outline: none;
-    padding: 10px;
-}
-label{
-    margin-bottom: 10px;
+/* World image */
+.left-cont .worldImg {
     display: block;
+
+    width: min(100%, 350px);
+    height: auto;
+    max-height: 150px;
+    margin: 40px auto 0;
+
+    object-fit: contain;
 }
-.submit{
-    color: white;
-    background: #a5a5a5;
-    border: solid;
-    padding: 5pt;
-    width: 100px;
-    border-radius: 10px;
+
+/* ========================================
+   Form panel
+======================================== */
+
+.right-cont {
+    padding: 48px clamp(30px, 5vw, 70px);
+    background: #ffffff;
+}
+
+#gform {
+    width: 100%;
+    margin: 0;
+}
+
+.form-elements {
+    width: 100%;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+
+    margin-bottom: 32px;
+}
+
+.input-group {
+    min-width: 0;
+}
+
+/* Scoped form styling */
+.right-cont label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #202020;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.right-cont input,
+.right-cont textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    color: #202020;
+    background: #ffffff;
+    font: inherit;
+    outline: none;
+}
+
+.right-cont input {
+    padding: 10px 2px 7px;
+
+    border: 0;
+    border-bottom: 1px solid #bdbdbd;
+}
+
+.right-cont textarea {
+    min-height: 130px;
+    padding: 12px;
+
+    border: 1px solid #bdbdbd;
+    border-radius: 3px;
+    resize: vertical;
+}
+
+.right-cont input:focus,
+.right-cont textarea:focus {
+    border-color: #202020;
+}
+
+.required-field {
+    margin: 8px 0 0;
+
+    color: #777777;
+    font-size: 0.75rem;
+}
+
+/* Submit button */
+.submit {
+    display: block;
+
+    width: 120px;
+    margin: 22px auto 0;
+    padding: 10px 18px;
+
+    color: #ffffff;
+    background: #202020;
+    border: 2px solid #202020;
+    border-radius: 4px;
+
+    font-size: 0.9rem;
+    font-weight: 600;
     text-decoration: none;
-    font-size: .9rem;
-    border-style: solid;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 0;
+
     cursor: pointer;
+
+    transition:
+        color 180ms ease,
+        background-color 180ms ease;
 }
+
 .submit:hover {
-    color: white;
-    background-color: #202020; 
-
-        }   
-.required-field{
-    color: #ccc;
-    font-size: xx-small;
+    color: #202020;
+    background: #ffffff;
 }
 
-.cont-h2{
-    text-decoration: none;
+.submit:focus-visible {
+    outline: 2px solid #202020;
+    outline-offset: 3px;
 }
 
-.left-cont .worldImg{
-    height: 150px;
-    width: 350px;
-    margin-top: 40pt;
-    max-width: 100%;
-}
+/* ========================================
+   Tablet and mobile
+======================================== */
 
-@media screen and (max-width: 500px){
-    .left-cont{
-        flex-basis: 100%;
-    
+@media (max-width: 768px) {
+    .contact {
+        grid-template-columns: 1fr;
     }
-    .right-cont{
-        flex-basis: 100%
-    }
-  
-    .container{
-       max-width: 100%;
-       width: 100%;
-       
-   }
-    .left-cont .worldImg{
-            height: 50px;
-            width: 100px;
-            position: absolute;
-            position: relative; left:60px;
-            margin-top: 0pt;
-            max-width: 100%;
-        }
-    .cont-para{
+
+    .left-cont {
+        align-items: center;
+        padding: 40px 24px;
+
         text-align: center;
+    }
+
+    .left-cont .worldImg {
+        width: min(100%, 220px);
+        max-height: 100px;
+        margin-top: 24px;
+    }
+
+    .right-cont {
+        padding: 40px 24px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 500px) {
+    .input-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+
+        margin-bottom: 24px;
+    }
+
+    .left-cont {
+        padding: 36px 20px;
+    }
+
+    .right-cont {
+        padding: 36px 20px;
+    }
+
+    .left-cont .worldImg {
+        width: min(100%, 150px);
+        max-height: 75px;
+        margin: 20px auto 0;
+    }
+
+    .submit {
+        width: 100%;
     }
 }
