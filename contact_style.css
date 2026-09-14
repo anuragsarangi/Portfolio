@@ -5,6 +5,7 @@
 .contact {
     width: 100%;
     display: grid;
+    padding-top: 30px;
     grid-template-columns: minmax(0, 40%) minmax(0, 60%);
 }
 
