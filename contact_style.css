@@ -2,10 +2,23 @@
    Contact section
 ======================================== */
 
+:root {
+    --header-height: 88px;
+    --header-content-gap: 24px;
+}
+
+body.container-body {
+    padding-top: var(--header-height);
+}
+
+/* Space between header and contact section */
+.contact {
+    margin-top: var(--header-content-gap);
+}
+
 .contact {
     width: 100%;
     display: grid;
-    padding-top: 30px;
     grid-template-columns: minmax(0, 40%) minmax(0, 60%);
 }
 
