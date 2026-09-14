@@ -163,56 +163,137 @@
 }
 
 /* ========================================
-   Tablet and mobile
+   Final mobile contact-page correction
 ======================================== */
 
-@media (max-width: 768px) {
-    .contact {
-        grid-template-columns: 1fr;
+@media screen and (max-width: 768px) {
+    html,
+    body.container-body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        overflow-x: hidden;
     }
 
-    .left-cont {
-        align-items: center;
-        padding: 40px 24px;
+    /* Keep all three header links visible */
+    body.container-body .site-header {
+        width: 100%;
+        max-width: 100%;
+    }
 
+    body.container-body .header-nav {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    body.container-body .header-nav__list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    body.container-body .header-nav__link {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Contact section */
+    body.container-body .contact {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* Dark introduction panel */
+    body.container-body .left-cont {
+        width: 100%;
+        min-width: 0;
+        padding: 36px 24px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        color: #ffffff;
+        background: #202020;
         text-align: center;
     }
 
-    .left-cont .worldImg {
-        width: min(100%, 220px);
-        max-height: 100px;
-        margin-top: 24px;
+    body.container-body .cont-h2 {
+        margin: 0 0 10px;
+
+        color: #ffffff;
+        font-size: clamp(1.6rem, 7vw, 2rem);
+        line-height: 1.2;
     }
 
-    .right-cont {
-        padding: 40px 24px;
-    }
-}
+    body.container-body .cont-para {
+        margin: 0;
 
-/* Small mobile screens */
-@media (max-width: 500px) {
-    .input-row {
-        grid-template-columns: 1fr;
-        gap: 24px;
-
-        margin-bottom: 24px;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 1rem;
+        text-align: center;
     }
 
-    .left-cont {
-        padding: 36px 20px;
+    /* Reset all previous map positioning */
+    body.container-body .left-cont .worldImg {
+        position: static;
+        inset: auto;
+
+        display: block;
+        width: min(180px, 60%);
+        height: auto;
+        max-width: 180px;
+        max-height: 90px;
+        margin: 24px auto 0;
+
+        object-fit: contain;
     }
 
-    .right-cont {
-        padding: 36px 20px;
-    }
-
-    .left-cont .worldImg {
-        width: min(100%, 150px);
-        max-height: 75px;
-        margin: 20px auto 0;
-    }
-
-    .submit {
+    /* Form section */
+    body.container-body .right-cont {
         width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 36px 24px;
+
+        background: #ffffff;
+    }
+
+    body.container-body #gform,
+    body.container-body .form-elements {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    body.container-body .input-row {
+        width: 100%;
+        margin: 0 0 24px;
+
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    body.container-body .input-group {
+        width: 100%;
+        min-width: 0;
+    }
+
+    body.container-body .right-cont input,
+    body.container-body .right-cont textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    body.container-body .submit {
+        width: 100%;
+        margin: 24px 0 0;
     }
 }
