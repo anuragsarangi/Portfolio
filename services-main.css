@@ -240,25 +240,33 @@
         transform: translateY(-3px);
     }
     .contact-me {
-        display: inline-block;
-        margin-top: 16px;
-        padding: 14px 24px;
-        border: 2px solid #202020;
-        border-radius: 3px;
-        background: #202020;
-        color: #fff;
-        font-size: 0.9rem;
-        font-weight: 700;
-        text-decoration: none;
+        display: flex;
         align-items: center;
         justify-content: center;
-        transition: background 0.2s ease, color 0.2s ease;
-      }
-      
-      .contact-me:hover {
-        background: #fff;
+    
+        width: fit-content;
+        margin: 16px auto 0;
+        padding: 14px 24px;
+    
+        color: #ffffff;
+        background: #202020;
+        border: 2px solid #202020;
+        border-radius: 3px;
+    
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+    
+        transition:
+            background 0.2s ease,
+            color 0.2s ease;
+    }
+    
+    .contact-me:hover {
         color: #202020;
-      }
+        background: #ffffff;
+    }
       
 }
 
