@@ -168,4 +168,14 @@
     min-height: auto;
     padding: 28px;
   }
+
+  .industry-heading {
+  width: 100%;
+  text-align: center; 
+}
+
+  .industry-experience .section-label {
+    width: 100%;
+    text-align: center; 
+  }
 }
