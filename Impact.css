@@ -74,15 +74,26 @@
 /* Mobile layout */
 @media (max-width: 768px) {
   .impact-section {
-    margin: 45px 20px;
-    padding: 35px 22px;
+      margin: 45px 20px;
+      padding: 35px 22px;
+  }
+
+  /* Centre the Impact label */
+  .impact .section-label {
+      width: 100%;
+      text-align: center;
+  }
+
+  /* Centre the underline */
+  .impact .section-label::after {
+      margin: 12px auto 0;
   }
 
   .impact-grid {
-    grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
   }
 
   .impact-card {
-    text-align: center;
+      text-align: center;
   }
 }
