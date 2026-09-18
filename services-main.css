@@ -239,7 +239,12 @@
         box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
         transform: translateY(-3px);
     }
-   /* Contact button */
+}
+
+/* ========================================
+   Contact button — all screen sizes
+======================================== */
+
 .services-main .contact-me {
     display: flex;
     align-items: center;
@@ -266,12 +271,16 @@
         background-color 0.2s ease;
 }
 
+.services-main .contact-me:visited {
+    color: #ffffff;
+}
+
 .services-main .contact-me:hover {
     color: #202020;
     background-color: #ffffff;
 }
 
-/* Mobile */
+/* Contact button — mobile */
 @media screen and (max-width: 600px) {
     .services-main .contact-me {
         width: min(100%, 240px);
@@ -279,13 +288,12 @@
         padding: 13px 22px;
     }
 }
-      
-}
 
-
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     .service-card,
-    .service-card__link span {
+    .service-card__link span,
+    .contact-me {
         transition: none;
     }
 }
