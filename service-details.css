@@ -11,36 +11,32 @@
 
 
 html,
-body.container-body {
+body.service-details-page {
     width: 100%;
     max-width: none;
+    min-height: 100%;
     margin: 0;
+    padding: 0;
     overflow-x: hidden;
 }
 
-body.container-body .footer-sec {
-    width: 100vw !important;
-    max-width: none !important;
-
-    margin-top: 70px !important;
-    margin-right: calc(50% - 50vw) !important;
-    margin-bottom: 0 !important;
-    margin-left: calc(50% - 50vw) !important;
-
-    padding: 0 !important;
-    box-sizing: border-box !important;
+body.service-details-page .service-detail-main {
+    width: 100%;
 }
 
-body.container-body .footer-sec .footer {
-    width: 100% !important;
-    max-width: none !important;
-    min-width: 100% !important;
+body.service-details-page .footer-sec {
+    width: 100%;
+    max-width: none;
+    margin: 70px 0 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    margin: 0 !important;
-    padding-right: clamp(24px, 8vw, 180px) !important;
-    padding-left: clamp(24px, 8vw, 180px) !important;
-
-    box-sizing: border-box !important;
+body.service-details-page .footer {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .service-detail-main,
