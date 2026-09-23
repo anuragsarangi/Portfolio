@@ -461,3 +461,20 @@
         transition: none;
     }
 }
+@media screen and (min-width: 769px) {
+    body.container-body .footer-sec {
+        width: 100%;
+        max-width: none;
+        margin-right: 0;
+        margin-left: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body.container-body .footer-sec .footer {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        box-sizing: border-box;
+    }
+}
