@@ -281,6 +281,23 @@
     line-height: 1.5;
 }
 
+/* The width issue is caused by CSS, not multiple footer elements. */
+
+.footer-sec {
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+}
+
+.footer {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 /* Tablet */
 @media (min-width: 700px) {
     .service-detail-layout {
