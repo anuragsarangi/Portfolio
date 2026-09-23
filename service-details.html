@@ -12,48 +12,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script src="header.js" defer></script>
 </head>
-
-<body class="service-detail-main" id="main-content">
+<body class="container-body">
+    <header class="site-header">
+        <nav class="header-nav" aria-label="Main navigation">
+            <ul class="header-nav__list">
+                <li>
+                    <a class="header-nav__link"
+                       href="index.html">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 10.5 12 3l9 7.5V21h-6v-7H9v7H3V10.5Z"/>
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a class="header-nav__link active"
+                       href="services-main.html" aria-current="page">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="7" width="18" height="14" rx="2"/>
+                            <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                            <path d="M3 12h18"/>
+                            <path d="M10 12v2h4v-2"/>
+                        </svg>
+                        <span>Services</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a class="header-nav__link"
+                       href="contact.html">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="m3 6 9 7 9-7"/>
+                        </svg>
+                        <span>Contact Me</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+<main class="service-detail-main" id="main-content">
     <div class="service-detail-layout">
-        <header class="site-header">
-            <nav class="header-nav" aria-label="Main navigation">
-                <ul class="header-nav__list">
-                    <li>
-                        <a class="header-nav__link"
-                           href="index.html">
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M3 10.5 12 3l9 7.5V21h-6v-7H9v7H3V10.5Z"/>
-                            </svg>
-                            <span>Home</span>
-                        </a>
-                    </li>
-        
-                    <li>
-                        <a class="header-nav__link active"
-                           href="services-main.html" aria-current="page">
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <rect x="3" y="7" width="18" height="14" rx="2"/>
-                                <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
-                                <path d="M3 12h18"/>
-                                <path d="M10 12v2h4v-2"/>
-                            </svg>
-                            <span>Services</span>
-                        </a>
-                    </li>
-        
-                    <li>
-                        <a class="header-nav__link"
-                           href="contact.html">
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <rect x="2" y="4" width="20" height="16" rx="2"/>
-                                <path d="m3 6 9 7 9-7"/>
-                            </svg>
-                            <span>Contact Me</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
         <section class="services-section" aria-labelledby="services-title">
             <div class="services-shell">
                 <header class="services-intro">
@@ -485,6 +485,7 @@
             </article>
         </section>
     </div>
+    </main>
     <section class="footer-sec">
         <footer class="footer">
           <p class="copyright">© 2026 Anurag Sarangi. All rights reserved.</p>
@@ -507,4 +508,4 @@
         </footer>
       </section>
       <script src="service-details.js"></script>
-    </body>
+</body>
