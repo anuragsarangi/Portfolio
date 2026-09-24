@@ -2,22 +2,21 @@
    Contact section
 ======================================== */
 
+/*
+Style.css already controls the fixed header and
+provides the top offset for the page content.
+*/
+
 :root {
-    --header-height: 88px;
     --header-content-gap: 24px;
 }
 
-main.container-body {
-    padding-top: var(--header-height);
-}
-
-/* Space between header and contact section */
-.contact {
-    margin-top: var(--header-content-gap);
-}
+/* Space between fixed header and contact section */
 
 .contact {
     width: 100%;
+    margin-top: var(--header-content-gap);
+
     display: grid;
     grid-template-columns: minmax(0, 40%) minmax(0, 60%);
 }
@@ -28,7 +27,10 @@ main.container-body {
     box-sizing: border-box;
 }
 
-/* Left contact panel */
+/* ========================================
+   Left contact panel
+======================================== */
+
 .left-cont {
     padding: 48px clamp(30px, 5vw, 70px);
 
@@ -42,16 +44,17 @@ main.container-body {
 
 .cont-h2 {
     margin: 0 0 12px;
+
     color: #ffffff;
     text-decoration: none;
 }
 
 .cont-para {
     margin: 0;
+
     color: rgba(255, 255, 255, 0.82);
 }
 
-/* World image */
 .left-cont .worldImg {
     display: block;
 
@@ -69,31 +72,28 @@ main.container-body {
 
 .right-cont {
     padding: 48px clamp(30px, 5vw, 70px);
+
     background: #ffffff;
 }
 
-#gform {
+#gform,
+.form-elements {
     width: 100%;
     margin: 0;
 }
 
-.form-elements {
-    width: 100%;
-}
-
 .input-row {
+    margin-bottom: 32px;
+
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 32px;
-
-    margin-bottom: 32px;
 }
 
 .input-group {
     min-width: 0;
 }
 
-/* Scoped form styling */
 .right-cont label {
     display: block;
     margin-bottom: 8px;
@@ -106,6 +106,7 @@ main.container-body {
 .right-cont input,
 .right-cont textarea {
     width: 100%;
+
     box-sizing: border-box;
 
     color: #202020;
@@ -127,6 +128,7 @@ main.container-body {
 
     border: 1px solid #bdbdbd;
     border-radius: 3px;
+
     resize: vertical;
 }
 
@@ -135,6 +137,10 @@ main.container-body {
     border-color: #202020;
 }
 
+/* ========================================
+   Form note and submit button
+======================================== */
+
 .required-field {
     margin: 8px 0 0;
 
@@ -142,7 +148,6 @@ main.container-body {
     font-size: 0.75rem;
 }
 
-/* Submit button */
 .submit {
     display: block;
 
@@ -177,7 +182,7 @@ main.container-body {
 }
 
 /* ========================================
-   Final mobile contact-page correction
+   Mobile contact page
 ======================================== */
 
 @media screen and (max-width: 768px) {
@@ -186,33 +191,37 @@ main.container-body {
         width: 100%;
         max-width: 100%;
         margin: 0;
+
         overflow-x: hidden;
     }
 
-    /* Keep all three header links visible */
-    main.container-body .site-header {
+    /* Header is outside main.container-body */
+
+    .site-header {
         width: 100%;
         max-width: 100%;
     }
 
-    main.container-body .header-nav {
+    .header-nav {
         width: 100%;
         max-width: 420px;
         margin: 0 auto;
     }
 
-    main.container-body .header-nav__list {
+    .header-nav__list {
         width: 100%;
+
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    main.container-body .header-nav__link {
+    .header-nav__link {
         width: 100%;
         min-width: 0;
     }
 
-    /* Contact section */
+    /* Contact content is inside main.container-body */
+
     main.container-body .contact {
         width: 100%;
         max-width: 100%;
@@ -222,7 +231,6 @@ main.container-body {
         grid-template-columns: minmax(0, 1fr);
     }
 
-    /* Dark introduction panel */
     main.container-body .left-cont {
         width: 100%;
         min-width: 0;
@@ -254,12 +262,12 @@ main.container-body {
         text-align: center;
     }
 
-    /* Reset all previous map positioning */
     main.container-body .left-cont .worldImg {
         position: static;
         inset: auto;
 
         display: block;
+
         width: min(180px, 60%);
         height: auto;
         max-width: 180px;
@@ -269,7 +277,6 @@ main.container-body {
         object-fit: contain;
     }
 
-    /* Form section */
     main.container-body .right-cont {
         width: 100%;
         min-width: 0;
