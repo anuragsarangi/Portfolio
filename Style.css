@@ -601,3 +601,24 @@ div .image-create{
         font-size: 25px;
     }
 }
+@media screen and (min-width: 768px) {
+    .site-header.scrolled {
+        height: 54px !important;
+        min-height: 54px !important;
+        padding: 0 !important;
+    }
+
+    .site-header.scrolled .header-nav,
+    .site-header.scrolled .header-nav__list,
+    .site-header.scrolled .header-nav__list li {
+        height: 54px !important;
+        min-height: 0 !important;
+    }
+
+    .site-header.scrolled .header-nav__link {
+        height: 54px !important;
+        min-height: 0 !important;
+        padding: 3px 4px !important;
+        gap: 0 !important;
+    }
+}
