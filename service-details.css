@@ -311,7 +311,7 @@ body.service-details-page .footer {
     line-height: 1.5;
 }
 
-/* The width issue is caused by CSS, not multiple footer elements. */
+/* Footer*/
 
 .footer-sec {
     width: 100%;
@@ -385,12 +385,15 @@ body.service-details-page .footer {
 /* Desktop */
 @media (min-width: 960px) {
     .service-detail-layout {
-        padding: 36px 32px 64px;
+        /* 154px header + 16px gap */
+        padding: 170px 32px 64px;
+
         display: grid;
         grid-template-columns: 280px minmax(0, 1fr);
         align-items: start;
         gap: 0;
     }
+}
 
     .service-detail-nav {
         position: sticky;
