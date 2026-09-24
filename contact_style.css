@@ -1,168 +1,204 @@
 /* ========================================
-   Contact section
+   Contact page
+   No header or footer styles included
 ======================================== */
 
-/*
-Style.css already controls the fixed header and
-provides the top offset for the page content.
-*/
-
 :root {
+    --contact-ink: #202020;
+    --contact-border: #d2d2d2;
+    --contact-muted: #6b6b6b;
     --header-content-gap: 24px;
 }
 
-
-/* Space between fixed header and contact section */
-
-.contact {
-    width: 100%;
-    margin-top: var(--header-content-gap);
-
-    display: grid;
-    grid-template-columns: minmax(0, 40%) minmax(0, 60%);
-}
-
-.left-cont,
-.right-cont {
-    min-width: 0;
-    box-sizing: border-box;
-}
-
 /* ========================================
-   Left contact panel
+   Contact layout
 ======================================== */
 
-.left-cont {
-    padding: 48px clamp(30px, 5vw, 70px);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    color: #ffffff;
-    background: #202020;
-}
-
-.cont-h2 {
-    margin: 0 0 12px;
-
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.cont-para {
-    margin: 0;
-
-    color: rgba(255, 255, 255, 0.82);
-}
-
-.left-cont .worldImg {
-    display: block;
-
-    width: min(100%, 350px);
-    height: auto;
-    max-height: 150px;
-    margin: 40px auto 0;
-
-    object-fit: contain;
-}
-
-/* ========================================
-   Form panel
-======================================== */
-
-.right-cont {
-    padding: 48px clamp(30px, 5vw, 70px);
-
-    background: #ffffff;
-}
-
-#gform,
-.form-elements {
-    width: 100%;
-    margin: 0;
-}
-
-.input-row {
-    margin-bottom: 32px;
+main.container-body .contact {
+    width: min(calc(100% - 64px), 1500px);
+    min-height: 650px;
+    margin: var(--header-content-gap) auto 0;
 
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 32px;
+
+    background: #ffffff;
 }
 
-.input-group {
+main.container-body .left-cont,
+main.container-body .right-cont {
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* ========================================
+   Left message panel
+======================================== */
+
+main.container-body .left-cont {
+    min-height: 650px;
+    padding: clamp(42px, 5vw, 84px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    color: #ffffff;
+    background: var(--contact-ink);
+}
+
+main.container-body .left-cont::before {
+    display: block;
+
+    width: 64px;
+    height: 4px;
+    margin-bottom: 34px;
+
+    content: "";
+    background: #ffffff;
+}
+
+main.container-body .cont-h2 {
+    max-width: 460px;
+    margin: 0;
+
+    color: #ffffff;
+    font-size: clamp(2rem, 3vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+}
+
+main.container-body .cont-para {
+    margin: 16px 0 0;
+
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+main.container-body .left-cont .worldImg {
+    display: block;
+
+    width: min(100%, 460px);
+    height: auto;
+    max-height: 230px;
+    margin: 76px 0 0;
+
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* ========================================
+   Right form panel
+======================================== */
+
+main.container-body .right-cont {
+    padding: clamp(40px, 5vw, 80px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+}
+
+main.container-body #gform {
+    width: min(100%, 620px);
+    margin: 0;
+    padding: clamp(28px, 3vw, 46px);
+
+    border: 1px solid var(--contact-border);
+    background: #ffffff;
+}
+
+main.container-body .form-elements {
+    width: 100%;
+}
+
+main.container-body .input-row {
+    margin: 0 0 20px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+}
+
+main.container-body .input-group {
     min-width: 0;
 }
 
-.right-cont label {
+main.container-body .right-cont label {
     display: block;
     margin-bottom: 8px;
 
-    color: #202020;
-    font-size: 0.9rem;
-    font-weight: 600;
+    color: var(--contact-ink);
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 1.3;
 }
 
-.right-cont input,
-.right-cont textarea {
+main.container-body .right-cont input,
+main.container-body .right-cont textarea {
     width: 100%;
 
     box-sizing: border-box;
 
-    color: #202020;
+    color: var(--contact-ink);
     background: #ffffff;
+    border: 1px solid #c9c9c9;
+    border-radius: 0;
+
     font: inherit;
     outline: none;
+
+    transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease;
 }
 
-.right-cont input {
-    padding: 10px 2px 7px;
-
-    border: 0;
-    border-bottom: 1px solid #bdbdbd;
+main.container-body .right-cont input {
+    height: 46px;
+    padding: 10px 12px;
 }
 
-.right-cont textarea {
-    min-height: 130px;
+main.container-body .right-cont textarea {
+    min-height: 150px;
     padding: 12px;
-
-    border: 1px solid #bdbdbd;
-    border-radius: 3px;
 
     resize: vertical;
 }
 
-.right-cont input:focus,
-.right-cont textarea:focus {
-    border-color: #202020;
+main.container-body .right-cont input:focus,
+main.container-body .right-cont textarea:focus {
+    border-color: var(--contact-ink);
+    box-shadow: 0 0 0 2px rgba(32, 32, 32, 0.1);
 }
 
-/* ========================================
-   Form note and submit button
-======================================== */
+main.container-body .required-field {
+    margin: 10px 0 0;
 
-.required-field {
-    margin: 8px 0 0;
-
-    color: #777777;
-    font-size: 0.75rem;
+    color: var(--contact-muted);
+    font-size: 0.76rem;
+    line-height: 1.4;
 }
 
-.submit {
+main.container-body .submit {
     display: block;
 
-    width: 120px;
-    margin: 22px auto 0;
-    padding: 10px 18px;
+    min-width: 170px;
+    margin: 28px auto 0;
+    padding: 14px 26px;
 
     color: #ffffff;
-    background: #202020;
-    border: 2px solid #202020;
-    border-radius: 4px;
+    background: var(--contact-ink);
+    border: 2px solid var(--contact-ink);
+    border-radius: 0;
 
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.2;
     text-decoration: none;
 
     cursor: pointer;
@@ -172,125 +208,92 @@ provides the top offset for the page content.
         background-color 180ms ease;
 }
 
-.submit:hover {
-    color: #202020;
+main.container-body .submit:hover {
+    color: var(--contact-ink);
     background: #ffffff;
 }
 
-.submit:focus-visible {
-    outline: 2px solid #202020;
-    outline-offset: 3px;
+main.container-body .submit:focus-visible {
+    outline: 2px solid var(--contact-ink);
+    outline-offset: 4px;
 }
 
 /* ========================================
-   Mobile contact page
+   Mobile
 ======================================== */
 
 @media screen and (max-width: 768px) {
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-
-        overflow-x: hidden;
-    }
-
-       /* Contact content is inside main.container-body */
-
     main.container-body .contact {
         width: 100%;
-        max-width: 100%;
-        margin: 0;
+        min-height: 0;
+        margin-top: 0;
 
-        display: grid;
         grid-template-columns: minmax(0, 1fr);
     }
 
     main.container-body .left-cont {
-        width: 100%;
-        min-width: 0;
-        padding: 36px 24px;
+        min-height: 0;
+        padding: 46px 24px;
 
-        display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
 
-        color: #ffffff;
-        background: #202020;
         text-align: center;
+    }
+
+    main.container-body .left-cont::before {
+        width: 48px;
+        height: 3px;
+        margin-bottom: 22px;
     }
 
     main.container-body .cont-h2 {
-        margin: 0 0 10px;
+        max-width: 350px;
 
-        color: #ffffff;
-        font-size: clamp(1.6rem, 7vw, 2rem);
-        line-height: 1.2;
+        font-size: clamp(1.9rem, 9vw, 2.5rem);
     }
 
     main.container-body .cont-para {
-        margin: 0;
+        margin-top: 12px;
 
-        color: rgba(255, 255, 255, 0.82);
         font-size: 1rem;
-        text-align: center;
     }
 
     main.container-body .left-cont .worldImg {
-        position: static;
-        inset: auto;
+        width: min(100%, 280px);
+        max-height: 140px;
+        margin: 34px auto 0;
 
-        display: block;
-
-        width: min(180px, 60%);
-        height: auto;
-        max-width: 180px;
-        max-height: 90px;
-        margin: 24px auto 0;
-
-        object-fit: contain;
+        object-position: center;
     }
 
     main.container-body .right-cont {
-        width: 100%;
-        min-width: 0;
-        margin: 0;
-        padding: 36px 24px;
-
-        background: #ffffff;
+        padding: 32px 20px;
     }
 
-    main.container-body #gform,
-    main.container-body .form-elements {
+    main.container-body #gform {
         width: 100%;
-        max-width: 100%;
-        margin: 0;
+        padding: 24px 20px;
     }
 
     main.container-body .input-row {
-        width: 100%;
-        margin: 0 0 24px;
-
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        gap: 24px;
+        gap: 18px;
+        margin-bottom: 18px;
     }
 
-    main.container-body .input-group {
-        width: 100%;
-        min-width: 0;
-    }
-
-    main.container-body .right-cont input,
     main.container-body .right-cont textarea {
-        width: 100%;
-        max-width: 100%;
+        min-height: 140px;
     }
 
     main.container-body .submit {
         width: 100%;
-        margin: 24px 0 0;
+        margin-top: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    main.container-body .right-cont input,
+    main.container-body .right-cont textarea,
+    main.container-body .submit {
+        transition: none;
     }
 }
