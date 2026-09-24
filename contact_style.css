@@ -7,7 +7,7 @@
     --header-content-gap: 24px;
 }
 
-body.container-body {
+main.container-body {
     padding-top: var(--header-height);
 }
 
@@ -182,7 +182,7 @@ body.container-body {
 
 @media screen and (max-width: 768px) {
     html,
-    body.container-body {
+    body {
         width: 100%;
         max-width: 100%;
         margin: 0;
@@ -190,30 +190,30 @@ body.container-body {
     }
 
     /* Keep all three header links visible */
-    body.container-body .site-header {
+    main.container-body .site-header {
         width: 100%;
         max-width: 100%;
     }
 
-    body.container-body .header-nav {
+    main.container-body .header-nav {
         width: 100%;
         max-width: 420px;
         margin: 0 auto;
     }
 
-    body.container-body .header-nav__list {
+    main.container-body .header-nav__list {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    body.container-body .header-nav__link {
+    main.container-body .header-nav__link {
         width: 100%;
         min-width: 0;
     }
 
     /* Contact section */
-    body.container-body .contact {
+    main.container-body .contact {
         width: 100%;
         max-width: 100%;
         margin: 0;
@@ -223,7 +223,7 @@ body.container-body {
     }
 
     /* Dark introduction panel */
-    body.container-body .left-cont {
+    main.container-body .left-cont {
         width: 100%;
         min-width: 0;
         padding: 36px 24px;
@@ -238,7 +238,7 @@ body.container-body {
         text-align: center;
     }
 
-    body.container-body .cont-h2 {
+    main.container-body .cont-h2 {
         margin: 0 0 10px;
 
         color: #ffffff;
@@ -246,7 +246,7 @@ body.container-body {
         line-height: 1.2;
     }
 
-    body.container-body .cont-para {
+    main.container-body .cont-para {
         margin: 0;
 
         color: rgba(255, 255, 255, 0.82);
@@ -255,7 +255,7 @@ body.container-body {
     }
 
     /* Reset all previous map positioning */
-    body.container-body .left-cont .worldImg {
+    main.container-body .left-cont .worldImg {
         position: static;
         inset: auto;
 
@@ -270,7 +270,7 @@ body.container-body {
     }
 
     /* Form section */
-    body.container-body .right-cont {
+    main.container-body .right-cont {
         width: 100%;
         min-width: 0;
         margin: 0;
@@ -279,14 +279,14 @@ body.container-body {
         background: #ffffff;
     }
 
-    body.container-body #gform,
-    body.container-body .form-elements {
+    main.container-body #gform,
+    main.container-body .form-elements {
         width: 100%;
         max-width: 100%;
         margin: 0;
     }
 
-    body.container-body .input-row {
+    main.container-body .input-row {
         width: 100%;
         margin: 0 0 24px;
 
@@ -295,18 +295,18 @@ body.container-body {
         gap: 24px;
     }
 
-    body.container-body .input-group {
+    main.container-body .input-group {
         width: 100%;
         min-width: 0;
     }
 
-    body.container-body .right-cont input,
-    body.container-body .right-cont textarea {
+    main.container-body .right-cont input,
+    main.container-body .right-cont textarea {
         width: 100%;
         max-width: 100%;
     }
 
-    body.container-body .submit {
+    main.container-body .submit {
         width: 100%;
         margin: 24px 0 0;
     }
