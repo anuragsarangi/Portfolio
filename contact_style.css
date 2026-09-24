@@ -196,32 +196,7 @@ provides the top offset for the page content.
         overflow-x: hidden;
     }
 
-    /* Header is outside main.container-body */
-
-    .site-header {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .header-nav {
-        width: 100%;
-        max-width: 420px;
-        margin: 0 auto;
-    }
-
-    .header-nav__list {
-        width: 100%;
-
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .header-nav__link {
-        width: 100%;
-        min-width: 0;
-    }
-
-    /* Contact content is inside main.container-body */
+       /* Contact content is inside main.container-body */
 
     main.container-body .contact {
         width: 100%;
