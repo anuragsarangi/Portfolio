@@ -275,6 +275,7 @@ body {
 }
 
 
+
 /* ========================================
    Desktop
 ======================================== */
@@ -486,5 +487,117 @@ div .image-create{
 
     div .image-create{
         position: relative; left: -30px;
+    }
+}
+
+/* ========================================
+   Original footer configuration
+======================================== */
+
+#footer-placeholder {
+    width: 100%;
+    max-width: none;
+}
+
+.footer-sec {
+    width: 100%;
+    max-width: none;
+    margin: 50px 0 0;
+    padding: 0;
+}
+
+.footer {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 22px 40px;
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    color: #ffffff;
+    background: #202020;
+}
+
+.copyright {
+    margin: 0;
+
+    color: #ffffff;
+}
+
+.soc-link {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.soc-link a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    font-size: 25px;
+    line-height: 1;
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.soc-link a:visited {
+    color: #ffffff;
+}
+
+.soc-link a:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.soc-link a:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* ========================================
+   Mobile footer
+======================================== */
+
+@media screen and (max-width: 600px) {
+    .footer {
+        padding: 26px 20px;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+
+        text-align: center;
+    }
+
+    .copyright {
+        width: 100%;
+        margin: 0;
+
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .soc-link {
+        width: 100%;
+        margin: 0;
+
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .soc-link a {
+        font-size: 25px;
     }
 }
