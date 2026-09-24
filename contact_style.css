@@ -303,45 +303,33 @@ main.container-body .submit:focus-visible {
 
 @media screen and (min-width: 769px) {
     main.container-body .contact {
-        height: auto !important;
+        margin: 16px auto 0;
         min-height: 0;
 
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
         align-items: stretch;
     }
 
-    main.container-body .left-cont,
-    main.container-body .right-cont {
-        height: auto !important;
+    main.container-body .left-cont {
         min-height: 0;
     }
 
-    /* Both panels now grow to the form's actual height */
-    main.container-body .left-cont {
-        padding: clamp(48px, 5vw, 84px);
-
-        justify-content: center;
-    }
-
-    /* Overrides any older absolute positioning of the map */
-    main.container-body .left-cont .worldImg {
-        position: static !important;
-        inset: auto !important;
-        transform: none !important;
-
-        width: min(100%, 460px);
-        height: auto;
-        max-height: 210px;
-        margin: 64px 0 0;
-
-        object-fit: contain;
-        object-position: left center;
-    }
-
+    /* Remove the large white inset around the form */
     main.container-body .right-cont {
-        padding: clamp(48px, 5vw, 80px);
+        min-height: 0;
+        padding: 0;
+
+        display: flex;
+        align-items: stretch;
     }
 
+    /* Make the bordered form card fill the full right column */
     main.container-body #gform {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+
         box-sizing: border-box;
     }
 }
