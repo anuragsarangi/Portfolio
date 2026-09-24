@@ -311,6 +311,7 @@ main.container-body .submit:focus-visible {
         align-items: stretch;
     }
 
+
     main.container-body .left-cont {
         min-height: 0;
     }
@@ -331,5 +332,16 @@ main.container-body .submit:focus-visible {
         margin: 0;
 
         box-sizing: border-box;
+    }
+}
+@media screen and (min-width: 769px) {
+    /* 154px header + 16px visual gap */
+    main.container-body {
+        padding-top: 170px;
+    }
+
+    /* The gap is now handled by main padding */
+    main.container-body .contact {
+        margin-top: 0;
     }
 }
