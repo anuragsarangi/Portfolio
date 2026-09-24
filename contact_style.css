@@ -11,6 +11,14 @@ provides the top offset for the page content.
     --header-content-gap: 24px;
 }
 
+main.container-body {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding-right: 0;
+    padding-left: 0;
+}
+
 /* Space between fixed header and contact section */
 
 .contact {
