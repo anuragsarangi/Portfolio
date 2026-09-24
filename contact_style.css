@@ -337,7 +337,7 @@ main.container-body .submit:focus-visible {
 @media screen and (min-width: 769px) {
     /* 154px header + 16px visual gap */
     main.container-body {
-        padding-top: 100px;
+        padding-top: 80px;
     }
 
     /* The gap is now handled by main padding */
