@@ -48,12 +48,12 @@ main.container-body .left-cont {
     background: var(--contact-ink);
 }
 
-main.container-body .left-cont::before {
+main.container-body .cont-h2::after {
     display: block;
 
     width: 64px;
     height: 4px;
-    margin-bottom: 34px;
+    margin-top: 22px;
 
     content: "";
     background: #ffffff;
@@ -240,10 +240,10 @@ main.container-body .submit:focus-visible {
         text-align: center;
     }
 
-    main.container-body .left-cont::before {
+    main.container-body .cont-h2::after {
         width: 48px;
         height: 3px;
-        margin-bottom: 22px;
+        margin: 18px auto 0;
     }
 
     main.container-body .cont-h2 {
