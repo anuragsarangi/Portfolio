@@ -144,8 +144,12 @@ body.service-details-page .footer {
     display: block;
     width: 34px;
     height: 3px;
-    margin: 12px 0;
+    margin: 16px 0 0;
     background: var(--service-detail-ink);
+}
+
+.service-detail-panel__rule + p {
+    margin-top: 16px;
 }
 
 .service-detail-panel__heading {
@@ -409,8 +413,12 @@ body.service-details-page .footer {
     .service-detail-nav__rule {
         width: 34px;
         height: 3px;
-        margin: 13px 24px 0;
+        margin: 16px 24px 0;
         background: var(--service-detail-white);
+    }
+
+    .service-detail-nav__rule + .service-detail-nav__lead {
+        margin-top: 16px;
     }
 
     .service-detail-nav__title {
