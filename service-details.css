@@ -144,7 +144,7 @@ body.service-details-page .footer {
     display: block;
     width: 34px;
     height: 3px;
-    margin-bottom: 12px;
+    margin: 12px 0;
     background: var(--service-detail-ink);
 }
 
@@ -409,7 +409,7 @@ body.service-details-page .footer {
     .service-detail-nav__rule {
         width: 34px;
         height: 3px;
-        margin: 0 24px 13px;
+        margin: 13px 24px 0;
         background: var(--service-detail-white);
     }
 
