@@ -536,3 +536,18 @@ body.service-details-page .footer {
         box-sizing: border-box;
     }
 }
+/* Mobile safeguard: never show the desktop service sidebar */
+
+@media screen and (max-width: 959px) {
+    .service-detail-layout {
+        display: block;
+    }
+
+    .service-detail-nav {
+        display: none !important;
+    }
+
+    .service-detail-mobile-nav {
+        display: block !important;
+    }
+}
