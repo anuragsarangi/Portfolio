@@ -570,3 +570,18 @@ body.service-details-page .footer {
         display: block !important;
     }
 }
+@media screen and (max-width: 959px) {
+    html body .service-detail-main .service-detail-content
+        > .service-detail-mobile-nav {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    html body .service-detail-main .service-detail-mobile-nav
+        > .service-detail-mobile-nav__button {
+        display: flex !important;
+    }
+}
