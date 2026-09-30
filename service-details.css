@@ -550,4 +550,23 @@ body.service-details-page .footer {
     .service-detail-mobile-nav {
         display: block !important;
     }
+}@media screen and (max-width: 959px) {
+    /* Hide the desktop sidebar */
+    .service-detail-nav {
+        display: none !important;
+    }
+
+    /* Show the mobile service selector */
+    .service-detail-mobile-nav {
+        display: block !important;
+        margin: 0 0 14px;
+    }
+
+    .service-detail-mobile-nav__button {
+        display: flex !important;
+    }
+
+    .service-detail-mobile-nav__links:not([hidden]) {
+        display: block !important;
+    }
 }
