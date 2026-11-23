@@ -64,4 +64,8 @@
     grid-template-columns: 1fr;
     gap: 16px;
   }
+  .technical-skills > .section-label,
+.technical-skills > h2 {
+  text-align: center;
+}
 }
