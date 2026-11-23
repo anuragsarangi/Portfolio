@@ -1,70 +1,67 @@
-.bottom-title{
-  text-align: center;
+.technical-skills {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 6vw, 90px) 64px;
+  color: #202020;
 }
 
-.below-text{
-  text-align: center;
+.technical-skills h2 {
+  margin: 0 0 28px;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.15;
 }
 
-.flex-wrapper {
-    display: flex;
-    flex-flow: row nowrap;
+.technical-skills__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.technical-skills__card {
+  padding: clamp(20px, 3vw, 32px);
+  border: 1px solid #d8d8d8;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.technical-skills__card h3 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 20px;
+  font-size: clamp(18px, 2vw, 24px);
+}
+
+.technical-skills__card h3 i {
+  display: grid;
+  place-items: center;
+  flex: 0 0 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #f0f0f0;
+  font-size: 18px;
+}
+
+.technical-skills__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.technical-skills__tags li {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #f0f0f0;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 700px) {
+  .technical-skills__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
-  
-  .single-chart {
-    width: 33%;
-    justify-content: space-around ;
-  }
-  
-  .circular-chart {
-    display: block;
-    margin: 10px auto;
-    max-width: 30%;
-    max-height: 80Lpx;
-  }
-  
-  .circle-bg {
-    fill: none;
-    stroke: #eee;
-    stroke-width: 3.8;
-  }
-  
-  .circle {
-    fill: none;
-    stroke-width: 2.8;
-    stroke-linecap: round;
-    animation: progress 1s ease-out forwards;
-  }
-  
-  @keyframes progress {
-    0% {
-      stroke-dasharray: 0 100;
-    }
-  }
-  
-  .circular-chart.orange .circle {
-    stroke: #ff9f00;
-  }
-  
-  .circular-chart.green .circle {
-    stroke: #4CC790;
-  }
-  
-  .circular-chart.blue .circle {
-    stroke: #3c9ee5;
-  }
-  .circular-chart.purple .circle {
-    stroke: #40398f;
-  }
-  .circular-chart.Rblue .circle {
-    stroke: #25bfe6;
-  }
-  .circular-chart.brown .circle {
-    stroke: #4f5b5e;
-  }
-  .percentage {
-    fill: #666;
-    font-family: sans-serif;
-    font-size: 0.5em;
-    text-anchor: middle;
-  }
+}
