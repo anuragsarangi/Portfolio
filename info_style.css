@@ -4,7 +4,7 @@
   gap: clamp(56px, 7vw, 130px);
   max-width: 1440px;
   margin: 0 auto;
-  padding: 80px clamp(24px, 6vw, 90px);
+  padding: 80px clamp(24px, 6vw, 90px) 32px;
   background: #fff;
   color: #202020;
 }
