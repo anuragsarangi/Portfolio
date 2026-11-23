@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog | Anurag Sarangi</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="blog.css">
+  <link rel="stylesheet" href="info_style.css">
+  <link rel="stylesheet" href="pure.css">
+  <link rel="stylesheet" href="services-main.css">
+  <script src="header.js" defer></script>
+</head>
+<body class="blog-page">
+  <header class="site-header">
+    <nav class="header-nav" aria-label="Main navigation">
+      <ul class="header-nav__list">
+        <li>
+          <a class="header-nav__link" href="index.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 10.5 12 3l9 7.5V21h-6v-7H9v7H3V10.5Z"/>
+            </svg>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a class="header-nav__link active" href="blog.html" aria-current="page">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="5" y="3" width="14" height="18" rx="2"/>
+              <path d="M8 8h8M8 12h8M8 16h8"/>
+            </svg>
+            <span>Blog</span>
+          </a>
+        </li>
+        <li>
+          <a class="header-nav__link" href="services-main.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="7" width="18" height="14" rx="2"/>
+              <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+              <path d="M3 12h18M10 12v2h4v-2"/>
+            </svg>
+            <span>Services</span>
+          </a>
+        </li>
+        <li>
+          <a class="header-nav__link" href="contact.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m3 6 9 7 9-7"/>
+            </svg>
+            <span>Contact Me</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="blog-main">
+    <div class="blog-intro">
+      <h1>Blog</h1>
+      <p>Writing on information architecture, publishing automation, and AI.</p>
+    </div>
+
+    <div class="blog-grid">
+      <article class="blog-card blog-card--tinted">
+        <p class="blog-card__category">Structured content</p>
+        <h2>Managing DITA conditions with DITAVAL</h2>
+        <p class="blog-card__summary">
+          A practical way to manage publishing conditions across projects.
+        </p>
+        <a class="blog-card__link" href="managing-dita-conditions.html"
+           aria-label="Read article: Managing DITA conditions with DITAVAL">
+          <span>Read article</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </article>
+
+      <article class="blog-card">
+        <p class="blog-card__category">Publishing automation</p>
+        <h2>Automating DITA-OT publishing</h2>
+        <p class="blog-card__summary">
+          How a CI/CD pipeline supports repeatable builds.
+        </p>
+        <a class="blog-card__link" href="automating-dita-ot-publishing.html"
+           aria-label="Read article: Automating DITA-OT publishing">
+          <span>Read article</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </article>
+    </div>
+  </main>
+</body>
+</html>
