@@ -22,26 +22,13 @@
     margin-bottom: clamp(24px, 4vw, 48px);
   }
   
+  
   .blog-intro h1 {
     margin: 0;
-    font-size: clamp(40px, 5vw, 64px);
-    line-height: 1.08;
-  }
-  
-  .blog-intro h1::after {
-    content: "";
-    display: block;
-    width: 56px;
-    height: 4px;
-    margin-top: 16px;
-    background: currentColor;
-  }
-  
-  .blog-intro p {
-    margin: 16px 0 0;
-    color: var(--blog-muted);
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-    line-height: 1.55;
+    max-width: 30ch;
+    font-size: clamp(28px, 3vw, 44px);
+    font-weight: 700;
+    line-height: 1.2;
   }
   
   .blog-grid {
