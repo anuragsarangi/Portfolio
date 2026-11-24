@@ -3,11 +3,24 @@
     --blog-muted: #505050;
     --blog-border: #d1d1d1;
     --blog-header-height: 88px;
-  
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     background: #fff;
     color: var(--blog-ink);
+  }
+
+  
+  .blog-main {
+    flex: 1 0 auto;
+    width: 100%;
+  }
+  
+  .blog-page > .footer-sec {
+    margin-block-end: 0;
   }
   
   .blog-main {
