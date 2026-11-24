@@ -23,9 +23,9 @@
   }
   
   
-  .blog-intro h1 {
+  .blog-intro > h2 {
     margin: 0;
-    max-width: 30ch;
+    max-width: 65%;
     font-size: clamp(28px, 3vw, 44px);
     font-weight: 700;
     line-height: 1.2;
@@ -108,4 +108,25 @@
       grid-template-columns: 1fr;
       gap: 16px;
     }
+    .blog-intro,
+      .blog-card {
+      text-align: center;
+}
+
+.blog-intro > h2,
+    .blog-intro > .section-label::after {
+     margin-inline: auto;
+}
+
+.blog-card {
+   align-items: center;
+}
+
+.blog-card__link {
+  justify-content: center;
+}
+    @media (max-width: 900px) {
+      .blog-intro > h2 {
+        max-width: 100%;
+      }
   }
