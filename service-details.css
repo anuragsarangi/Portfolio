@@ -590,3 +590,20 @@ body.service-details-page .footer {
         margin: 12px 0 14px;
     }
 }
+
+@media (max-width: 959px) {
+    body.service-details-page {
+      --service-header-height: 88px;
+      padding-top: var(--service-header-height);
+    }
+  
+    .service-detail-content {
+      scroll-margin-top: calc(var(--service-header-height) + 12px);
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 959px) {
+    body.service-details-page {
+      --service-header-height: 126px;
+    }
+  }
